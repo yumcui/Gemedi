@@ -1,0 +1,20 @@
+{"instruction":"用一句话解释量子计算。","output":"量子计算利用叠加和纠缠等量子特性进行并行计算，能在某些问题上大幅超越经典计算。"}
+{"instruction":"解释机器学习和深度学习的区别。","output":"机器学习是从数据中学习规则的总称，深度学习是其中用多层神经网络自动提取特征的一类方法。"}
+{"instruction":"写一首关于春天的五言诗。","output":"东风拂柳岸，细雨润青畴。百草新芽动，莺声上小楼。"}
+{"instruction":"简述布朗大学的特点。","output":"布朗大学以开放课程和跨学科自由著称，位于罗得岛普罗维登斯。"}
+{"instruction":"什么是过拟合？","output":"模型对训练数据学得过于“死板”，在新数据上表现变差，称为过拟合。"}
+{"instruction":"给出一个 Python 装饰器的简单示例。","output":"示例：\n\ndef log(fn):\n    def wrapper(*args, **kwargs):\n        print('calling', fn.__name__)\n        return fn(*args, **kwargs)\n    return wrapper\n\n@log\ndef add(a,b):\n    return a+b"}
+{"instruction":"如何通俗解释 RAG？","output":"RAG 先从外部知识库检索相关文档，再把文档与问题一起喂给大模型生成答案。"}
+{"instruction":"把下面句子改写得更简洁：'我们将要开始实验的初始化部分。'","output":"我们将开始初始化实验。"}
+{"instruction":"给出一个 Linux 查看显存的命令。","output":"在有 NVIDIA 显卡的机器上可用：nvidia-smi。"}
+{"instruction":"什么是学习率？","output":"学习率控制每次参数更新的步长，过大不稳定，过小收敛慢。"}
+{"instruction":"解释 Top-p 采样。","output":"Top-p 采样按累积概率阈值 p 截断高概率子集，再在其中随机采样。"}
+{"instruction":"给出一个二分查找的 Python 代码片段。","output":"def bs(a,x):\n    l,r=0,len(a)-1\n    while l<=r:\n        m=(l+r)//2\n        if a[m]==x:return m\n        if a[m]<x:l=m+1\n        else:r=m-1\n    return -1"}
+{"instruction":"简述交叉熵损失。","output":"交叉熵度量预测分布与真实分布的差异，分类任务常用作优化目标。"}
+{"instruction":"把'你好世界'翻译成英文。","output":"Hello, world."}
+{"instruction":"写一个正则表达式匹配邮箱。","output":"可以用：^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}$"}
+{"instruction":"解释 BatchNorm 的作用。","output":"BatchNorm 对层的输入做标准化与线性变换，帮助稳定训练、加速收敛。"}
+{"instruction":"如何一句话介绍 Kubernetes？","output":"Kubernetes 是一个自动化容器编排平台，用于部署、扩缩与管理容器化应用。"}
+{"instruction":"将'快速的棕色狐狸跳过懒狗'改写为古风句。","output":"捷狐越眠犬，风影掠长堤。"}
+{"instruction":"给一个计算斐波那契的迭代写法（Python）。","output":"def fib(n):\n    a,b=0,1\n    for _ in range(n):\n        a,b=b,a+b\n    return a"}
+{"instruction":"一句话总结大语言模型的本质。","output":"大语言模型通过在海量文本上学习条件概率，基于上下文生成最可能的下一段文本。"}
