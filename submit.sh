@@ -1,14 +1,15 @@
 #!/bin/bash
 
+
 # --- 1. SBATCH 指令：(保持不变) ---
-#SBATCH -p gpu
+#SBATCH -p gpu            # (!! 关键 !!) 留在你 *有权限* 的 "gpu" 分区
+#SBATCH -C geforce3090
 #SBATCH --gres=gpu:1
 #SBATCH -n 4
-#SBATCH -t 1:00:00
-#SBATCH --mem=32G
+#SBATCH -t 2:00:00
+#SBATCH --mem=64G
 #SBATCH -o slurm-%j.out
 #SBATCH -e slurm-%j.err
-
 # --- 2. 我们的环境设置：(已修复) ---
 
 echo "作业开始：在 $(hostname) 上运行"
@@ -41,7 +42,8 @@ pip install torch==2.1.2 torchvision==0.16.2 torchaudio==2.1.2 --index-url https
 echo "--- (6/7) PyTorch (cu121) 安装完成 ---"
 
 # (关键) 安装我们那套“已知兼容”的库
-pip install transformers==4.36.2 peft==0.7.1 accelerate==0.25.0 datasets==2.15.0 bitsandbytes==0.41.3 trl==0.7.4 scipy
+# (!! 关键 !!) 我们使用一套“全新”的、互相兼容的库
+pip install --no-cache-dir transformers==4.40.0 peft==0.10.0 accelerate==0.30.0 datasets==2.19.0 bitsandbytes==0.43.1 trl==0.8.6 scipy tiktoken sentencepiece
 echo "--- (7/7) Transformers/Peft/TRL/BitsandBytes 安装完成 ---"
 
 # --- 3. 运行我们的 Python 脚本 ---
