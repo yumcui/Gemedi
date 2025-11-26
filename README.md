@@ -26,18 +26,21 @@ The pipeline consists of four main scripts:
 ```bash
 # 1. Generate good data
 python3 fill_phi_data.py
-# Output: patient_extracted_with_goo_phi.csv
+# Input: patient_extracted.csv
+# Output: patient_extracted_with_good_phi.csv 
 
 # 2. Generate bad data
 python3 fill_phi_bad_data.py
+# Input: patient_extracted.csv
 # Output: patient_extracted_with_bad_phi.csv
 
 # 3. Preprocess bad data
 python3 preprocess.py
-# Output: preprocess_data_label_bad_phi.csv
+# Output: preprocess_data_label_bad_phi.csv when input patient_extracted_with_bad_phi.csv
+# Output: preprocess_data_label_good_phi.csv when input patient_extracted_with_good_phi.csv
 
 # 4. Compare results
-python3 compare_good_bad_data.py patient_extracted_with_goo_phi.csv patient_extracted_with_bad_phi.csv 
+python3 compare_good_bad_data.py 
 ```
 
 
