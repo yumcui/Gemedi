@@ -56,17 +56,15 @@ peft_config = LoraConfig(
 # --- 7. Define formatting function ---
 
 def formatting_prompts_func(example):
-    output_texts = []
-    for i in range(len(example['instruction'])):
-        text = f"""<|begin_of_text|><|start_header_id|>system<|end_header_id|>
+    # New TRL version: formatting_func receives a single example (dict), returns a single string
+    text = f"""<|begin_of_text|><|start_header_id|>system<|end_header_id|>
 
-{example['instruction'][i]}<|eot_id|><|start_header_id|>user<|end_header_id|>
+{example['instruction']}<|eot_id|><|start_header_id|>user<|end_header_id|>
 
-{example['input'][i]}<|eot_id|><|start_header_id|>assistant<|end_header_id|>
+{example['input']}<|eot_id|><|start_header_id|>assistant<|end_header_id|>
 
-{example['output'][i]}<|eot_id|>"""
-        output_texts.append(text)
-    return output_texts
+{example['output']}<|eot_id|>"""
+    return text
 
 # --- 8. training arguments and trainer ---
 training_arguments = TrainingArguments(
@@ -97,10 +95,8 @@ trainer = SFTTrainer(
     eval_dataset=dataset["validation"],
     peft_config=peft_config,
     formatting_func=formatting_prompts_func,
-    max_seq_length=1024,           
-    tokenizer=tokenizer,
+    processing_class=tokenizer,  # New API: tokenizer changed to processing_class
     args=training_arguments,
-    packing=False,
 )
 
 trainer.train()

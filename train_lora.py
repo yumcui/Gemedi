@@ -7,42 +7,42 @@ from transformers import (
     BitsAndBytesConfig,
     TrainingArguments,
 )
-from trl import SFTTrainer # <-- 我们仍然使用 SFTTrainer
+from trl import SFTTrainer # <-- We still use SFTTrainer
 
-# --- 1. 定义你的模型 (Qwen) ---
+# --- 1. Define Your Model (Qwen) ---
 model_name = "Qwen/Qwen2.5-7B-Instruct"
 
-# --- 2. (不变) 加载数据集 ---
+# --- 2. (Unchanged) Load Dataset ---
 dataset_name = "mlabonne/guanaco-llama2-1k"
-dataset = load_dataset(dataset_name, split="train") # (我们用全部 1000 条)
+dataset = load_dataset(dataset_name, split="train") # (We use all 1000 samples)
 
-# --- 3. (不变) 4-bit 量化配置 ---
+# --- 3. (Unchanged) 4-bit Quantization Configuration ---
 quant_config = BitsAndBytesConfig(
     load_in_4bit=True,
     bnb_4bit_quant_type="nf4",
     bnb_4bit_compute_dtype=torch.float16,
 )
 
-# --- 4. (关键更新) 加载模型和 Tokenizer ---
-print("--- (1/4) 正在加载模型... ---")
+# --- 4. (Key Update) Load Model and Tokenizer ---
+print("--- (1/4) Loading model... ---")
 model = AutoModelForCausalLM.from_pretrained(
     model_name,
     quantization_config=quant_config,
     device_map="auto",
-    trust_remote_code=True # (Qwen 需要这个)
+    trust_remote_code=True # (Qwen needs this)
 )
-# (我们不再需要 model.config.use_cache = False 了)
+# (We no longer need model.config.use_cache = False)
 
-print("--- (2/4) 正在加载 Tokenizer... ---")
+print("--- (2/4) Loading Tokenizer... ---")
 tokenizer = AutoTokenizer.from_pretrained(model_name, trust_remote_code=True)
-tokenizer.pad_token = tokenizer.eos_token # (这仍然很重要)
+tokenizer.pad_token = tokenizer.eos_token # (This is still important)
 
-# --- 5. (关键更新) LoRA 配置 (不变) ---
-# (这个 LoRAConfig 仍然是正确的)
+# --- 5. (Key Update) LoRA Configuration (Unchanged) ---
+# (This LoRAConfig is still correct)
 peft_config = LoraConfig(
     lora_alpha=16,
     lora_dropout=0.1,
-    r=16, # (我们之前用的 16)
+    r=16, # (We used 16 before)
     bias="none",
     task_type="CAUSAL_LM",
     target_modules=[
@@ -56,39 +56,39 @@ peft_config = LoraConfig(
     ]
 )
 
-# --- 6. (不变) 训练参数 ---
+# --- 6. (Unchanged) Training Arguments ---
 training_args = TrainingArguments(
-    output_dir="./lora-results", # 临时检查点
+    output_dir="./lora-results", # Temporary checkpoint
     per_device_train_batch_size=1,
     gradient_accumulation_steps=4,
     learning_rate=2e-4,
     logging_steps=10,
-    max_steps=50,       # (我们之前用的 50 步)
+    max_steps=50,       # (We used 50 steps before)
     fp16=True,
-    optim="paged_adamw_8bit" # (使用 8-bit 优化器节省内存)
+    optim="paged_adamw_8bit" # (Use 8-bit optimizer to save memory)
 )
 
-# --- 7. (!! 关键 API 变更 !!) SFTTrainer ---
-# 这是“新”的 API。它更简单了！
-print("--- (3/4) 正在初始化 SFTTrainer... ---")
+# --- 7. (!! Key API Change !!) SFTTrainer ---
+# This is the "new" API. It's simpler!
+print("--- (3/4) Initializing SFTTrainer... ---")
 trainer = SFTTrainer(
-    model=model,                  # (传入基础模型)
+    model=model,                  # (Pass base model)
     train_dataset=dataset,
-    peft_config=peft_config,      # (!! 新 !!) 直接把 LoRA 配置传给它
-    dataset_text_field="text",    # (!! 新 !!) 告诉它哪一列是文本
-    max_seq_length=512,           # (!! 新 !!) 设置最大长度
+    peft_config=peft_config,      # (!! New !!) Pass LoRA config directly
+    dataset_text_field="text",    # (!! New !!) Tell it which column is text
+    max_seq_length=512,           # (!! New !!) Set max length
     tokenizer=tokenizer,
     args=training_args,
 )
 
-# --- 8. (不变) 开始训练 ---
-print("--- (4/4) 开始训练... ---")
+# --- 8. (Unchanged) Start Training ---
+print("--- (4/4) Starting training... ---")
 trainer.train()
 
-# --- 9. (不变) 保存你的 LoRA 权重 ---
-print("--- 训练完成！正在保存最终权重... ---")
-# (我们把它保存到你熟悉的老地方)
+# --- 9. (Unchanged) Save Your LoRA Weights ---
+print("--- Training complete! Saving final weights... ---")
+# (We save it to the familiar old location)
 final_model_path = "./my-first-lora-weights"
 trainer.save_model(final_model_path)
 
-print(f"--- 成功！你的 LoRA 权重已保存到: {final_model_path} ---")
+print(f"--- Success! Your LoRA weights have been saved to: {final_model_path} ---")
