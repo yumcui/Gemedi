@@ -1,0 +1,465 @@
+index,generated_text,realism_score,gemini_medical_reasoning_evaluation,overall_score
+0,"Name: Ethan Patel                  Unit No:   2649756
+ 
+Admission Date: 2023-09-15              Discharge Date:   2023-10-05
+ 
+Date of Birth: 1995-02-12             Sex:   M
+ 
+Service: NEONATOLOGY
+ 
+Allergies: 
+No Known Allergies / Adverse Drug Reactions
+ 
+Attending: Dr. Sofia Rodriguez
+
+Discharge Medications:
+1. Amoxicillin 250 mg Suspension Sig: One (1) teaspoonful PO QID for 7 days to complete the course.
+Disp:*14 mL* Refills:*0*
+2. Hydrocortisone 15 mg/5 mL Elixir Sig: Five (5) mL PRN as needed for eczema flare-ups.
+Disp:*60 mL* Refils:*1*
+3. Simethicone 80 mg Suspension Sig: One (1) teaspoonful PO QID after feedings to reduce gas and discomfort.
+
+ 
+Discharge Disposition:
+Home
+ 
+Discharge Diagnosis:
+Respiratory syncytial virus (RSV) bronchiolitis, Eczema
+
+ 
+Discharge Condition:
+Mental Status: Alert and interactive.
+Level of Consciousness: Awake and responsive.
+
+ 
+Discharge Instructions:
+Please call the doctor if you notice difficulty breathing, increased coughing, or worsening eczema symptoms.  
+Monitor for signs of dehydration (increased thirst, decreased urine output) and seek immediate attention if concerned.  
+
+Continue breastfeeding as planned and do not hesitate to reach out with questions regarding feeding schedules or 
+nutrition. 
+
+Followup Instructions:
+Please return to see Dr. Sofia Rodriguez in 2 weeks for a routine follow-up appointment to assess progress and adjust treatment plan as necessary. If you experience increased respiratory distress, eczema flare-ups, or concerns about infant development before then, contact our office to discuss potential earlier follow-up options. We look forward to supporting your continued recovery!",0.7212684321796465,0.1,0.41063421608982326
+1,"Name: Emily Patel                    Unit No:   2756321
+ 
+Admission Date: 2024-10-25             Discharge Date:   2024-11-15
+ 
+Date of Birth: 1992-06-17             Sex:   F
+ 
+Service: PEDIATRICS
+ 
+Allergies: 
+No Known Allergies / Adverse Drug Reactions
+ 
+Attending: Dr. Sophia Rodriguez
+
+Discharge Medications:
+1. Amoxicillin 125 mg/5 mL Suspension Sig: One (1) teaspoon PO Q8H for 10 days.
+Disp:*20 mL Bottle(s)* Refills:*2*
+2. Diphenhydramine 12.5 mg/mL Syrup Sig: Five (5) mL PO PRN for allergic reactions.
+Disp:*120 mL Bottle(s)* Refills:*0*
+3. Hydrocortisone 1% Cream Sig: Apply topically as needed for rash.
+Disp:*30 g Tube(s)* Refills:*2*
+4. Loratadine 10 mg Tablet Sig: One (1) tablet PO DAILY
+(Daily).  
+Disp:*30 Tablet(s)* Refills:*0*
+
+ 
+Discharge Disposition:
+Home with parent
+ 
+Discharge Diagnosis:
+Acute pharyngitis, Allergic rhinitis, Mild eczema
+
+ 
+Discharge Condition:
+Mental Status: Clear and coherent.
+Level of Consciousness: Alert and interactive.
+
+ 
+Discharge Instructions:
+Please call the doctor if your child's fever is greater than 102°F or they show signs of dehydration. Monitor for 
+increased allergic symptoms such as difficulty breathing, wheezing, or facial swelling. 
+
+Resume all regular medications unless otherwise instructed. Take new medications exactly as directed and do not stop 
+any medication without consulting your pediatrician.
+
+Followup Instructions:
+Please return to see Dr. Sophia Rodriguez in one week for a follow-up appointment to assess improvement of symptoms 
+and adjust treatment plan if necessary. If you experience increased fever, difficulty breathing, or worsening allergic 
+reactions before then, contact our office to discuss potential earlier follow-up options.",0.8645420403108665,0.15,0.5072710201554332
+2,"Name: Emily Patel                 Unit No:   2789121
+ 
+Admission Date: 2023-08-25              Discharge Date:   2023-09-05
+ 
+Date of Birth: 1992-02-14             Sex:   F
+ 
+Service: PEDIATRICS
+ 
+Allergies: 
+No Known Allergies / Adverse Drug Reactions
+
+Attending: Dr. Rachel Kim
+
+Discharge Medications:
+1. Albuterol HFA 90mcg Inhaler Sig: Two (2) puffs PO Q4H as needed for asthma symptoms.
+Disp:*15 Inhaler(s)* Refills:*0*
+2. Cetirizine 10 mg Tablet Sig: One (1) Tablet PO DAILY (Daily).
+Disp:*30 Tablet(s)* Refills:*0*
+3. Fluticasone Propionate 220 mcg / Salmeterol Xinafoate 50mcg Inhaler Sig: Two (2) puffs PO BID 
+(Bid).  
+4. Omeprazole 10 mg Capsule, Delayed Release(E.C.) Sig: One (1) 
+Capsule, Delayed Release(E.C.) PO DAILY (Daily).
+Disp:*30 Capsule, Delayed Release(E.C.)(s)* Refills:*0*
+5. Prednisolone 15 mg Tablet Sig: Two (2) Tablet PO QD for 3 days as directed.
+Disp:*10 Tablet(s)* Refills:*0*
+
+ 
+Discharge Disposition:
+Home
+ 
+Discharge Diagnosis:
+Acute bronchiolitis, Asthma exacerbation, Gastroesophageal reflux disease (GERD)
+
+ 
+Discharge Condition:
+Mental Status: Alert and interactive.
+Level of Consciousness: Clear and oriented to person, place, and time.
+
+ 
+Discharge Instructions:
+Please call the doctor if you experience increased wheezing or shortness of breath, fever greater than 102.0, vomiting, or inability to tolerate medications.
+
+You may resume all regular home medications unless otherwise instructed.  
+
+Take all new medications as prescribed by your physicians and do not stop any medication without consulting your physician.
+ 
+
+Followup Instructions:
+Please return to see Dr. Rachel Kim in one week for a routine check-up to assess progress and adjust treatment plan as necessary for optimal management of asthma symptoms. If you experience increased wheezing or difficulty breathing before then, contact our office to discuss potential earlier follow-up options. We look forward to supporting your continued recovery!",0.7212684321796465,0.25,0.48563421608982327
+3,"Name: Ethan Russell                  Unit No:   2756217
+ 
+Admission Date: 2024-09-15              Discharge Date:   2024-10-02
+ 
+Date of Birth: 1965-08-22             Sex:   M
+ 
+Service: PEDIATRICS
+ 
+Allergies: 
+No Known Allergies / Adverse Drug Reactions
+
+Attending: Dr. Sophia Patel
+
+Discharge Medications:
+1. Albuterol 2 mg/3 mL Inhalation Solution Sig: Two (2) Inhalations Q8H as needed for asthma.
+Disp:*60 Inhala(s)* Refills:*0*
+2. Cetirizine 10 mg Tablet Sig: One (1) Tablet PO DAILY (Daily).
+Disp:*30 Tablet(s)* Refills:*0*
+3. Furosemide 40 mg Tablet Sig: Two (2) Tablets PO DAILY 
+(Daily).  
+4. Ibuprofen 100 mg/5 mL Oral Suspension Sig: Fifteen (15) mL PO Q6H as needed for fever.
+Disp:*120 mL* Refills:*0*
+5. Levothyroxine 25 mcg Tablet Sig: One (1) Tablet PO DAILY (Daily).
+
+ 
+Discharge Disposition:
+Home with Mother
+
+Discharge Diagnosis:
+Acute laryngotracheobronchitis, Hypothyroidism, Patent ductus arteriosus
+
+ 
+Discharge Condition:
+Mental Status: Cooperative and responsive.
+Level of Consciousness: Alert and interactive.
+
+ 
+Discharge Instructions:
+Please call the doctor if your child has a fever greater than 102.5, difficulty breathing, or increased coughing.  
+Take all new medications as prescribed by your pediatrician and do not stop any medication without consulting your physician.  
+Monitor your child's urine output closely for any signs of dehydration.
+
+Followup Instructions:
+Please return to see Dr. Sophia Patel in four weeks for a routine check-up to assess progress and adjust treatment 
+plan as necessary for optimal management of respiratory symptoms. If you experience increased coughing or difficulty 
+breathing before then, contact our office to discuss potential earlier follow-up options.",0.7099457745684048,0.15,0.4299728872842024
+4,"Name: Ethan Patel                  Unit No:   2756212
+ 
+Admission Date: 2024-07-25             Discharge Date:   2024-08-02
+ 
+Date of Birth: 1998-09-12             Sex:   M
+ 
+Service: PEDIATRICS
+ 
+Allergies: 
+No Known Allergies / Adverse Drug Reactions
+ 
+Attending: Dr. Sophia Rodriguez
+
+Discharge Medications:
+1. Albuterol 2 mg/5 mL Syrup Sig: 3 mL PO Q6H as needed for asthma symptoms.
+Disp:*60 mL* Refills:*0*
+2. Cetirizine 10 mg Tablet Sig: One (1) Tablet PO DAILY (Daily).
+Disp:*30 Tablet(s)* Refills:*0*
+3. Prednisone 5 mg Tablet Sig: Two (2) Tablet PO QOD for 7 days.
+Disp:*20 Tablet(s)* Refills:*0*
+4. Triamcinolone Acetonide 0.1% Ointment Sig: Apply to affected areas BID as needed for eczema symptoms.
+
+ 
+Discharge Disposition:
+Home with parent
+
+Discharge Diagnosis:
+Acute asthma exacerbation, Eczema, Mild dehydration
+ 
+
+ 
+Discharge Condition:
+Mental Status: Alert and interactive.
+Level of Consciousness: Oriented x 3.
+Appetite: Good. Activity level: Normal.
+
+ 
+Discharge Instructions:
+Please call the doctor if you have difficulty breathing, wheezing, or coughing up mucus. Monitor temperature and report any fever above 102°F. Apply topical corticosteroids to affected skin areas as directed.
+
+Take all new medications as prescribed by your physicians and do not stop any medication without consulting your physician.
+ 
+
+Followup Instructions:
+Please return to see Dr. Sophia Rodriguez in one week for follow-up appointment to assess asthma control and eczema symptoms. If you experience increased respiratory distress or worsening eczema, contact our office for earlier follow-up options.",0.8873612182543769,0.45,0.6686806091271884
+5,"Name: Emily Patel                     Unit No:   2721315
+ 
+Admission Date: 2022-09-15              Discharge Date:   2022-09-22
+ 
+Date of Birth: 1998-02-12             Sex:   F
+ 
+Service: PEDIATRICS
+ 
+Allergies: 
+No Known Allergies / Adverse Drug Reactions
+
+Attending: Dr. Sofia Rodriguez
+
+Discharge Medications:
+1. Acetazolamide 500 mg Tablet Sig: One (1) Tablet PO QD as needed for glaucoma.
+Disp:*30 Tablet(s)* Refills:*3*
+2. Azithromycin 250 mg Tablet Sig: Two (2) Tablets PO DAILY x5 days.
+Disp:*6 Tablet(s)* Refills:*0*
+3. Diphenhydramine 25 mg Syrup Sig: One (1) teaspoon PO QHS PRN for allergic 
+reaction prophylaxis.
+Disp:*120 mL* Refills:*0*
+4. Hydrocodone 5 mg/acetaminophen 325 mg Tablet Sig: Two (2) Tablets PO Q4H as needed 
+for pain.
+Disp:*30 Tablet(s)* Refills:*0*
+
+ 
+Discharge Disposition:
+Home
+ 
+Discharge Diagnosis:
+Acute anterior uveitis, Allergic rhinitis, Acute otitis media.
+
+ 
+Discharge Condition:
+Mental Status: Clear and cooperative.
+Level of Consciousness: Alert and interactive.
+
+ 
+Discharge Instructions:
+Please call the doctor if you have a fever over 102°F, increased redness in either eye, or worsening ear pain. 
+
+Resume all regular home medications unless otherwise instructed.  
+Take new medications as prescribed by your physician and do not stop any medication without consulting your physician.
+ 
+
+Followup Instructions:
+Return to see Dr. Sofia Rodriguez in one week for a follow-up examination of the eyes and ears to assess progress 
+and adjust treatment plan as necessary. If you experience increased pain or discomfort before then, contact our office 
+to discuss potential earlier follow-up options.",0.7212684321796465,0.15,0.4356342160898233
+6,"Name: Emily Patel                         Unit No:   2751234
+ 
+Admission Date: 2023-06-25               Discharge Date:   2023-07-08
+ 
+Date of Birth: 1992-02-12              Sex:   F
+ 
+Service: NEONATOLOGY
+ 
+Allergies: 
+No Known Allergies / Adverse Drug Reactions
+ 
+Attending: Dr. Sophia Rodriguez
+
+Discharge Medications:
+1. Albuterol 0.5 mg/mL Solution Sig: One (1) mL Inhalation q4h as needed for respiratory distress.
+Disp:*60 mL* Refills:*2*
+2. Azithromycin 250 mg Tablet Sig: One (1) Tablet PO DAILY (Daily).
+Disp:*10 Tablet(s)* Refils:*0*
+3. Fentanyl 50 mcg/mL Solution, Oral Sig: 1-2 drops PO q4h as needed for pain.
+Disp:*30 mL* Refills:*0*
+4. Ibuprofen 100 mg/mL Suspension Sig: 5-10 mL PO q6h as needed for fever and discomfort.
+Disp:*120 mL* Refils:*2*
+5. Metoclopramide 1 mg/mL Solution, Oral Sig: One (1) mL PO TID (Daily).
+Disp:*60 mL* Refills:*0*
+
+ 
+Discharge Disposition:
+Home
+ 
+Discharge Diagnosis:
+Respiratory distress due to bronchopulmonary dysplasia, Gastroesophageal reflux disease (GERD), Hypotension
+
+ 
+Discharge Condition:
+Mental Status: Alert and interactive.
+Level of Consciousness: Arousable but lethargic.
+
+ 
+Discharge Instructions:
+Please call the doctor if you have a temperature greater than 100.5, 
+increased respiratory distress or difficulty breathing, redness, swelling, or inability to feed orally.
+
+You may resume all regular home medications unless otherwise instructed.  
+
+Take all new medications as prescribed by your physicians and do not stop any medication without consulting your physician.
+ 
+
+Followup Instructions:
+Please return to see Dr. Sophia Rodriguez in one week for a routine check-up to assess progress and adjust treatment 
+plan as necessary for optimal management of respiratory distress symptoms. If you experience increased respiratory 
+distress or difficulty breathing before then, contact our office to discuss potential earlier follow-up options.",0.8404568720743675,0.15,0.49522843603718375
+7,"Name: Emily Rodriguez                  Unit No:   1234567
+ 
+Admission Date: 2023-09-25              Discharge Date:   2023-10-05
+ 
+Date of Birth: 1998-02-14             Sex:   F
+ 
+Service: PEDIATRICS
+ 
+Allergies: 
+No Known Allergies / Adverse Drug Reactions
+
+Attending: Dr. Maria Hernandez
+
+Discharge Medications:
+1. Amoxicillin 125 mg/5 mL Oral Suspension Sig: One (1) teaspoon PO Q12H for 10 days.
+Disp:*20 Bottle(s)* Refills:*2*
+2. Fluticasone 44 mcg Inhaler, Metered-Dose Sig: Two (2) puffs INHALED Q12H as needed.
+Disp:*60 Inhaler, Metered-Dose* Refills:*0*
+3. Ibuprofen 100 mg Tablet, Chewable Sig: One (1) tablet PO Q6H as needed for fever or pain.
+Disp:*24 Tablet(s)* Refills:*2*
+4. Levothyroxine 50 mcg Tablet Sig: One (1) tablet PO DAILY (Daily).
+Disp:*30 Tablet(s)* Refills:*0*
+
+ 
+Discharge Disposition:
+Home with Parent
+
+Discharge Diagnosis:
+Acute bronchitis, Allergic rhinitis, Thyroid nodularity
+
+ 
+Discharge Condition:
+Mental Status: Alert and interactive.
+Level of Consciousness: Clear and cooperative.
+
+ 
+Discharge Instructions:
+Please call the doctor if you have a temperature greater than 102.0, difficulty breathing, or increased nasal congestion.
+
+You may resume all regular home medications unless otherwise instructed.  
+Take all new medications as prescribed by your physicians and do not stop any medication without consulting your physician.
+ 
+
+Followup Instructions:
+Please return to see Dr. Maria Hernandez in six weeks for a routine check-up to assess progress and adjust treatment plan as necessary for optimal management of allergic rhinitis symptoms. If you experience increased difficulty breathing or nasal congestion before then, contact our office to discuss potential earlier follow-up options. We look forward to supporting your continued recovery!",0.8404568720743675,0.35,0.5952284360371838
+8,"Name: Emily Patel                        Unit No:   2678911
+ 
+Admission Date: 2023-09-15               Discharge Date:   2023-10-05
+ 
+Date of Birth: 1992-02-14             Sex:   F
+ 
+Service: PEDIATRICS
+ 
+Allergies: 
+No Known Allergies / Adverse Drug Reactions
+
+Attending: Dr. Sophia Rodriguez
+ 
+Discharge Medications:
+1. Cetirizine 5 mg Tablet Sig: One (1) Tablet PO DAILY (Daily).  
+Disp:*30 Tablet(s)* Refills:*2*
+2. Dextromethorphan/Doxycline Syrup Sig: Two (2) mL PO Q8H as needed for cough.  
+Disp:*120 mL* Refills:*0*
+3. Ibuprofen 100 mg Chewable Tablet Sig: One (1) Tablet PO Q6H as needed for fever.
+Disp:*60 Tablet(s)* Refills:*2*
+
+ 
+Discharge Disposition:
+Home with mother
+
+ 
+Discharge Diagnosis:
+Acute bronchiolitis, Pharyngitis, Rhinovirus infection.
+
+ 
+Discharge Condition:
+Mental Status: Alert and cooperative.
+Level of Consciousness: Awake and interactive.
+
+ 
+Discharge Instructions:
+Please call the doctor if you experience difficulty breathing, fever greater than 102.0, or worsening cough.  
+You may resume all regular home medications unless otherwise instructed.  
+
+Take all new medications as prescribed by your physicians and do not stop any medication without consulting your physician.
+ 
+
+Followup Instructions:
+Please return to see Dr. Sophia Rodriguez in one week for a routine check-up to assess progress and adjust treatment plan as necessary for optimal management of acute bronchiolitis symptoms. If you experience increased difficulty breathing or fever before then, contact our office to discuss potential earlier follow-up options. We look forward to supporting your continued recovery!",0.6878064409056575,0.1,0.3939032204528287
+9,"Name: Emily Patel                                  Unit No:  2734211
+ 
+Admission Date: 2024-08-20              Discharge Date:   2024-09-02
+ 
+Date of Birth: 1982-05-17             Sex:   F
+ 
+Service: PEDIATRICS
+ 
+Allergies: 
+No Known Allergies / Adverse Drug Reactions
+ 
+Attending: Dr. Rachel Kim
+
+Discharge Medications:
+1. Amoxicillin 125 mg/5 mL Oral Suspension Sig: One (1) teaspoon PO Q8H for 10 days.
+Disp:*15 Bottle(s)* Refills:*2*
+2. Prednisone 15 mg Tablet Sig: One (1) Tablet PO DAILY 
+(Daily).  
+3. Ibuprofen 100 mg/5 mL Oral Suspension Sig: Two (2) teaspoons PO Q6H PRN for fever and pain.
+Disp:*10 Bottle(s)* Refills:*0*
+4. Omeprazole 5 mg/0.5 mL Oral Suspension Sig: One (1) teaspoon PO DAILY 
+(Daily).
+Disp:*15 Bottle(s)* Refills:*2*
+
+ 
+Discharge Disposition:
+Home
+ 
+Discharge Diagnosis:
+Acute otitis media, Viral gastroenteritis
+
+ 
+Discharge Condition:
+Mental Status: Alert and interactive.
+Level of Consciousness: Clear and awake.
+
+ 
+Discharge Instructions:
+Please call the doctor if your child experiences difficulty breathing, increased vomiting, or severe ear pain. 
+
+Resume usual diet after 24 hours without symptoms of nausea or vomiting. Take all new medications as prescribed by your pediatrician and do not stop any medication without consulting your physician.
+ 
+
+Followup Instructions:
+Please return to see Dr. Rachel Kim in one week for a routine check-up to assess progress and adjust treatment plan as necessary for optimal management of acute otitis media symptoms. If you experience increased ear pain or difficulty hearing before then, contact our office to discuss potential earlier follow-up options. We look forward to supporting your child's continued recovery!",0.6878064409056575,0.15,0.41890322045282874
