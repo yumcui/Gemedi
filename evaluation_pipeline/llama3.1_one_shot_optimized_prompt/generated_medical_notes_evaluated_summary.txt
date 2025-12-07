@@ -1,0 +1,12 @@
+
+============================================================
+Evaluation Summary
+============================================================
+Input CSV: llama3.1_one_shot_optimized_prompt/generated_medical_notes.csv
+Output CSV: llama3.1_one_shot_optimized_prompt/generated_medical_notes_evaluated.csv
+Total Rows Evaluated: 15
+
+Average Realism Score: 0.2046
+Average Gemini Medical Reasoning Score: 0.4433
+Average Overall Score: 0.3240
+============================================================
