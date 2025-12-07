@@ -21,38 +21,74 @@ The script is completely standalone and does not require any external module imp
 
 ## Usage
 
+### Option 1: SLURM Cluster (Recommended for Oscar)
+
 1. Set your Gemini API key:
    ```bash
    export GEMINI_API_KEY='your-api-key-here'
    ```
 
-2. Run the evaluation script:
+2. Submit evaluation job with `sbatch`:
+   ```bash
+   sbatch submit_evaluation.sh <input_csv_file> [output_csv_file] [max_workers] [num_rows]
+   ```
+
+   Examples:
+   ```bash
+   # Basic usage
+   sbatch submit_evaluation.sh llama3.1_one_shot/generated_medical_notes.csv
+   
+   # Specify output file
+   sbatch submit_evaluation.sh input.csv output.csv
+   
+   # Specify threads and limit rows
+   sbatch submit_evaluation.sh input.csv output.csv 2 50
+   ```
+
+   The script automatically:
+   - Loads Ollama module and starts server
+   - Activates Python environment
+   - Runs evaluation with all arguments
+   - Stops Ollama server after completion
+
+### Option 2: Direct Python Execution
+
+1. Set your Gemini API key:
+   ```bash
+   export GEMINI_API_KEY='your-api-key-here'
+   ```
+
+2. Start Ollama server (required for clinical consistency evaluation):
+   ```bash
+   module load ollama  # On Oscar cluster
+   ollama serve &      # Start in background
+   ```
+   
+   **Note**: Without Ollama, the script will skip clinical consistency checks but still run other evaluations.
+
+3. Run the evaluation script:
    ```bash
    python evaluate_medical_notes.py <input_csv_file> [output_csv_file] [max_workers] [num_rows]
    ```
 
    Examples:
    ```bash
-   # Basic usage (Baseline Evaluation, default: 2 threads)
+   # Basic usage (default: 2 threads)
    python3 evaluate_medical_notes.py llama3.1_one_shot/generated_medical_notes.csv  
    
    # Specify output file
    python evaluate_medical_notes.py input.csv output.csv
    
-   # Specify number of threads for parallel processing
-   python evaluate_medical_notes.py input.csv output.csv 2
-   
-   # Process only first 50 rows (useful for testing)
+   # Specify threads and limit rows
    python evaluate_medical_notes.py input.csv output.csv 2 50
    ```
 
-   Arguments:
+### Arguments
+
    - `input_csv_file`: Path to input CSV file (required)
    - `output_csv_file`: Path to output CSV file (optional, default: `<input>_evaluated.csv`)
    - `max_workers`: Number of threads for parallel processing (optional, default: 2)
    - `num_rows`: Number of rows to process (optional, default: all rows)
-     - Useful for testing with a subset of data
-     - Only processes the first N rows from the CSV file
 
 ## Input Format
 
