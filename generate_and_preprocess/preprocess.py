@@ -866,17 +866,23 @@ class ClinicalConsistencyEvaluator:
 
 
 def calculate_age_at_discharge(text: str) -> int:
-    """从文本中计算年龄"""
-    discharge_pattern = r"Discharge Date:\s*([0-9\-\/]+)"
-    dob_pattern = r"(?:Date of Birth|DOB):\s*([0-9\-\/]+)"
+    """从文本中计算年龄 (支持 Markdown 格式)"""
+    # 支持 Markdown 格式 **Field:** 和普通格式 Field:
+    discharge_pattern = r"\*\*Discharge Date:\*\*\s*([0-9\-\/]+)|Discharge Date:\s*([0-9\-\/]+)"
+    dob_pattern = r"\*\*(?:Date of Birth|DOB):\*\*\s*([0-9\-\/]+)|(?:Date of Birth|DOB):\s*([0-9\-\/]+)"
     try:
         discharge_match = re.search(discharge_pattern, text, re.IGNORECASE)
         dob_match = re.search(dob_pattern, text, re.IGNORECASE)
         if not discharge_match or not dob_match:
             return -1
         
-        discharge_str = discharge_match.group(1).strip()
-        dob_str = dob_match.group(1).strip()
+        # 提取日期（支持两种格式，group(1) 是 Markdown 格式，group(2) 是普通格式）
+        discharge_str = (discharge_match.group(1) or discharge_match.group(2) or "").strip()
+        dob_str = (dob_match.group(1) or dob_match.group(2) or "").strip()
+        
+        if not discharge_str or not dob_str:
+            return -1
+            
         discharge_date = parser.parse(discharge_str)
         dob_date = parser.parse(dob_str)
         
@@ -889,20 +895,24 @@ def calculate_age_at_discharge(text: str) -> int:
 
 
 def extract_sex(text: str) -> Optional[str]:
-    """从文本中提取性别"""
-    sex_pattern = r"(?:Sex|Gender):\s*([A-Za-z]+)"
+    """从文本中提取性别 (支持 Markdown 格式)"""
+    # 支持 Markdown 格式 **Sex:** 和普通格式 Sex:
+    sex_pattern = r"\*\*(?:Sex|Gender):\*\*\s*([A-Za-z]+)|(?:Sex|Gender):\s*([A-Za-z]+)"
     match = re.search(sex_pattern, text, re.IGNORECASE)
     if match:
-        return match.group(1).strip()
+        sex_value = (match.group(1) or match.group(2) or "").strip()
+        return sex_value if sex_value else None
     return None
 
 
 def extract_diagnosis(text: str) -> Optional[str]:
-    """从文本中提取诊断"""
-    pattern = r"Discharge Diagnosis:\s*([\s\S]+?)(?=\n\s*\n|Discharge Condition:|History|$)"
+    """从文本中提取诊断 (支持 Markdown 格式)"""
+    # 支持 Markdown 格式 **Discharge Diagnosis:** 和普通格式
+    pattern = r"\*\*Discharge Diagnosis:\*\*\s*([\s\S]+?)(?=\n\s*\n|\*\*Discharge Condition:|\*\*History|$)|Discharge Diagnosis:\s*([\s\S]+?)(?=\n\s*\n|Discharge Condition:|History|$)"
     match = re.search(pattern, text, re.IGNORECASE)
     if match:
-        return match.group(1).strip().replace('\n', ' ')
+        diagnosis = (match.group(1) or match.group(2) or "").strip().replace('\n', ' ')
+        return diagnosis if diagnosis else "Unknown Diagnosis"
     return "Unknown Diagnosis"
 
 
