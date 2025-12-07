@@ -638,18 +638,37 @@ def evaluate_csv(input_csv: str, output_csv: str = None, max_workers: int = 2, n
     df.to_csv(output_csv, index=False)
     print(f"\nResults saved to: {output_csv}")
     
-    # Print averages
+    # Calculate averages
     avg_realism = sum(realism_scores) / len(realism_scores) if realism_scores else 0.0
     avg_gemini = sum(gemini_scores) / len(gemini_scores) if gemini_scores else 0.0
     avg_overall = sum(overall_scores) / len(overall_scores) if overall_scores else 0.0
     
-    print("\n" + "="*60)
-    print("Evaluation Summary")
-    print("="*60)
-    print(f"Average Realism Score: {avg_realism:.4f}")
-    print(f"Average Gemini Medical Reasoning Score: {avg_gemini:.4f}")
-    print(f"Average Overall Score: {avg_overall:.4f}")
-    print("="*60)
+    # Build summary text
+    summary_lines = []
+    summary_lines.append("\n" + "="*60)
+    summary_lines.append("Evaluation Summary")
+    summary_lines.append("="*60)
+    summary_lines.append(f"Input CSV: {input_csv}")
+    summary_lines.append(f"Output CSV: {output_csv}")
+    summary_lines.append(f"Total Rows Evaluated: {len(df)}")
+    summary_lines.append("")
+    summary_lines.append(f"Average Realism Score: {avg_realism:.4f}")
+    summary_lines.append(f"Average Gemini Medical Reasoning Score: {avg_gemini:.4f}")
+    summary_lines.append(f"Average Overall Score: {avg_overall:.4f}")
+    summary_lines.append("="*60)
+    
+    # Print summary
+    summary_text = "\n".join(summary_lines)
+    print(summary_text)
+    
+    # Save summary to txt file
+    summary_txt_file = os.path.splitext(output_csv)[0] + "_summary.txt"
+    try:
+        with open(summary_txt_file, 'w', encoding='utf-8') as f:
+            f.write(summary_text)
+        print(f"\nSummary saved to: {summary_txt_file}")
+    except Exception as e:
+        print(f"\nWarning: Failed to save summary to txt file: {e}")
 
 
 def main():

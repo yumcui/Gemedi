@@ -1,4 +1,4 @@
-index,generated_text,realism_score,gemini_medical_reasoning_evaluation,overall_score
+index,generated_text,realism_score,gemini_medical_reasoning_evaluation,overall_score,realism_issues
 0,"Name: Ethan Patel                  Unit No:   2649756
  
 Admission Date: 2023-09-15              Discharge Date:   2023-10-05
@@ -40,7 +40,7 @@ Continue breastfeeding as planned and do not hesitate to reach out with question
 nutrition. 
 
 Followup Instructions:
-Please return to see Dr. Sofia Rodriguez in 2 weeks for a routine follow-up appointment to assess progress and adjust treatment plan as necessary. If you experience increased respiratory distress, eczema flare-ups, or concerns about infant development before then, contact our office to discuss potential earlier follow-up options. We look forward to supporting your continued recovery!",0.7212684321796465,0.1,0.41063421608982326
+Please return to see Dr. Sofia Rodriguez in 2 weeks for a routine follow-up appointment to assess progress and adjust treatment plan as necessary. If you experience increased respiratory distress, eczema flare-ups, or concerns about infant development before then, contact our office to discuss potential earlier follow-up options. We look forward to supporting your continued recovery!",0.8645420403108665,0.15,0.5072710201554332,No issues found
 1,"Name: Emily Patel                    Unit No:   2756321
  
 Admission Date: 2024-10-25             Discharge Date:   2024-11-15
@@ -88,7 +88,7 @@ any medication without consulting your pediatrician.
 Followup Instructions:
 Please return to see Dr. Sophia Rodriguez in one week for a follow-up appointment to assess improvement of symptoms 
 and adjust treatment plan if necessary. If you experience increased fever, difficulty breathing, or worsening allergic 
-reactions before then, contact our office to discuss potential earlier follow-up options.",0.8645420403108665,0.15,0.5072710201554332
+reactions before then, contact our office to discuss potential earlier follow-up options.",0.9692203128380843,0.15,0.5596101564190421,No issues found
 2,"Name: Emily Patel                 Unit No:   2789121
  
 Admission Date: 2023-08-25              Discharge Date:   2023-09-05
@@ -137,7 +137,7 @@ Take all new medications as prescribed by your physicians and do not stop any me
  
 
 Followup Instructions:
-Please return to see Dr. Rachel Kim in one week for a routine check-up to assess progress and adjust treatment plan as necessary for optimal management of asthma symptoms. If you experience increased wheezing or difficulty breathing before then, contact our office to discuss potential earlier follow-up options. We look forward to supporting your continued recovery!",0.7212684321796465,0.25,0.48563421608982327
+Please return to see Dr. Rachel Kim in one week for a routine check-up to assess progress and adjust treatment plan as necessary for optimal management of asthma symptoms. If you experience increased wheezing or difficulty breathing before then, contact our office to discuss potential earlier follow-up options. We look forward to supporting your continued recovery!",0.9692203128380843,0.3,0.6346101564190422,No issues found
 3,"Name: Ethan Russell                  Unit No:   2756217
  
 Admission Date: 2024-09-15              Discharge Date:   2024-10-02
@@ -183,7 +183,7 @@ Monitor your child's urine output closely for any signs of dehydration.
 Followup Instructions:
 Please return to see Dr. Sophia Patel in four weeks for a routine check-up to assess progress and adjust treatment 
 plan as necessary for optimal management of respiratory symptoms. If you experience increased coughing or difficulty 
-breathing before then, contact our office to discuss potential earlier follow-up options.",0.7099457745684048,0.15,0.4299728872842024
+breathing before then, contact our office to discuss potential earlier follow-up options.",0.8566652027219165,0.15,0.5033326013609583,Clinical: Sex-diagnosis mismatch (sex_score: 0.10)
 4,"Name: Ethan Patel                  Unit No:   2756212
  
 Admission Date: 2024-07-25             Discharge Date:   2024-08-02
@@ -228,7 +228,7 @@ Take all new medications as prescribed by your physicians and do not stop any me
  
 
 Followup Instructions:
-Please return to see Dr. Sophia Rodriguez in one week for follow-up appointment to assess asthma control and eczema symptoms. If you experience increased respiratory distress or worsening eczema, contact our office for earlier follow-up options.",0.8873612182543769,0.45,0.6686806091271884
+Please return to see Dr. Sophia Rodriguez in one week for follow-up appointment to assess asthma control and eczema symptoms. If you experience increased respiratory distress or worsening eczema, contact our office for earlier follow-up options.",0.9692203128380843,0.35,0.6596101564190422,No issues found
 5,"Name: Emily Patel                     Unit No:   2721315
  
 Admission Date: 2022-09-15              Discharge Date:   2022-09-22
@@ -277,7 +277,7 @@ Take new medications as prescribed by your physician and do not stop any medicat
 Followup Instructions:
 Return to see Dr. Sofia Rodriguez in one week for a follow-up examination of the eyes and ears to assess progress 
 and adjust treatment plan as necessary. If you experience increased pain or discomfort before then, contact our office 
-to discuss potential earlier follow-up options.",0.7212684321796465,0.15,0.4356342160898233
+to discuss potential earlier follow-up options.",0.9499268809310302,0.15,0.549963440465515,No issues found
 6,"Name: Emily Patel                         Unit No:   2751234
  
 Admission Date: 2023-06-25               Discharge Date:   2023-07-08
@@ -328,7 +328,7 @@ Take all new medications as prescribed by your physicians and do not stop any me
 Followup Instructions:
 Please return to see Dr. Sophia Rodriguez in one week for a routine check-up to assess progress and adjust treatment 
 plan as necessary for optimal management of respiratory distress symptoms. If you experience increased respiratory 
-distress or difficulty breathing before then, contact our office to discuss potential earlier follow-up options.",0.8404568720743675,0.15,0.49522843603718375
+distress or difficulty breathing before then, contact our office to discuss potential earlier follow-up options.",0.9692203128380843,0.1,0.5346101564190422,No issues found
 7,"Name: Emily Rodriguez                  Unit No:   1234567
  
 Admission Date: 2023-09-25              Discharge Date:   2023-10-05
@@ -373,7 +373,7 @@ Take all new medications as prescribed by your physicians and do not stop any me
  
 
 Followup Instructions:
-Please return to see Dr. Maria Hernandez in six weeks for a routine check-up to assess progress and adjust treatment plan as necessary for optimal management of allergic rhinitis symptoms. If you experience increased difficulty breathing or nasal congestion before then, contact our office to discuss potential earlier follow-up options. We look forward to supporting your continued recovery!",0.8404568720743675,0.35,0.5952284360371838
+Please return to see Dr. Maria Hernandez in six weeks for a routine check-up to assess progress and adjust treatment plan as necessary for optimal management of allergic rhinitis symptoms. If you experience increased difficulty breathing or nasal congestion before then, contact our office to discuss potential earlier follow-up options. We look forward to supporting your continued recovery!",0.9692203128380843,0.35,0.6596101564190422,No issues found
 8,"Name: Emily Patel                        Unit No:   2678911
  
 Admission Date: 2023-09-15               Discharge Date:   2023-10-05
@@ -417,7 +417,7 @@ Take all new medications as prescribed by your physicians and do not stop any me
  
 
 Followup Instructions:
-Please return to see Dr. Sophia Rodriguez in one week for a routine check-up to assess progress and adjust treatment plan as necessary for optimal management of acute bronchiolitis symptoms. If you experience increased difficulty breathing or fever before then, contact our office to discuss potential earlier follow-up options. We look forward to supporting your continued recovery!",0.6878064409056575,0.1,0.3939032204528287
+Please return to see Dr. Sophia Rodriguez in one week for a routine check-up to assess progress and adjust treatment plan as necessary for optimal management of acute bronchiolitis symptoms. If you experience increased difficulty breathing or fever before then, contact our office to discuss potential earlier follow-up options. We look forward to supporting your continued recovery!",0.9692203128380843,0.1,0.5346101564190422,No issues found
 9,"Name: Emily Patel                                  Unit No:  2734211
  
 Admission Date: 2024-08-20              Discharge Date:   2024-09-02
@@ -462,4 +462,4 @@ Resume usual diet after 24 hours without symptoms of nausea or vomiting. Take al
  
 
 Followup Instructions:
-Please return to see Dr. Rachel Kim in one week for a routine check-up to assess progress and adjust treatment plan as necessary for optimal management of acute otitis media symptoms. If you experience increased ear pain or difficulty hearing before then, contact our office to discuss potential earlier follow-up options. We look forward to supporting your child's continued recovery!",0.6878064409056575,0.15,0.41890322045282874
+Please return to see Dr. Rachel Kim in one week for a routine check-up to assess progress and adjust treatment plan as necessary for optimal management of acute otitis media symptoms. If you experience increased ear pain or difficulty hearing before then, contact our office to discuss potential earlier follow-up options. We look forward to supporting your child's continued recovery!",0.9692203128380843,0.35,0.6596101564190422,No issues found
