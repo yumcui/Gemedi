@@ -11,4 +11,4 @@ module load python/3.11.0s-ixrhc3q cuda/12.1.1
 
 source /oscar/home/yshi119/Gemedi/llama_env/bin/activate
 
-python test_discriminator_v2.py
+python discriminator_v2.py
