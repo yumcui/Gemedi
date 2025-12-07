@@ -1,0 +1,24 @@
+# Ignore local environments
+llama_env/
+myenv/
+env/
+venv/
+.venv/
+
+# Ignore model directories
+llama3-discriminator/
+llama3-discriminator_v2/
+llama3-synthetic-patient-generator/
+llama.cpp/
+
+# Ignore output result directories
+results_generator/
+
+# Ignore Python cache
+__pycache__/
+*.pyc
+
+# Ignore large model files
+*.bin
+*.pt
+*.ckpt
