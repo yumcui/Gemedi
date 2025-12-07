@@ -1,0 +1,2408 @@
+index,generated_text,realism_score,gemini_medical_reasoning_evaluation,overall_score,realism_issues
+0,"**Patient Demographics**
+
+Name:    Emily Wilson   
+Unit No:   5321198  
+Admission Date:  2024-09-10              Discharge Date:   2024-09-20 
+Date of Birth:  2024-08-12             Sex:   F 
+
+Service: PEDIATRICS
+
+**Admission Diagnosis**
+
+Acute Bronchiolitis due to Respiratory Syncytial Virus (RSV)
+
+**Discharge Diagnosis**
+
+ICD-10 Code: J22.0 - Acute bronchiolitis
+
+**Hospital Course**
+
+Emily was admitted to the Pediatric ICU with symptoms of cough, congestion, and difficulty breathing. She required oxygen therapy and supportive care for 5 days in the hospital. Her condition improved significantly over the course of her stay.
+
+**Discharge Medications**
+
+1. Amoxicillin 40 mg/kg PO TID (3 times a day) for 10 days 
+2. Pulmicort 0.25 mg/kg PO BID (twice a day)
+3. Albuterol 2.5mg/3mL NEB Q6H (every 6 hours)
+
+**Discharge Instructions**
+
+Dear Emily's Parents,
+
+Emily was admitted to the hospital with symptoms of a viral upper respiratory infection that progressed to bronchiolitis. Her condition has improved significantly over the course of her stay, and she is ready for discharge.
+
+Please continue all medications as instructed above until completed.
+Monitor her temperature daily and report any fever above 102°F to your pediatrician immediately.
+Encourage Emily to drink plenty of fluids and follow a nutritious diet to help with recovery.
+
+If you experience any of the following symptoms, please seek medical attention:
+- Increased difficulty breathing or wheezing
+- Fever above 102°F for more than 48 hours
+- Vomiting or refusal to feed
+- Any other worrisome symptoms
+
+Thank you for allowing us to care for Emily during her hospital stay.
+Your Pediatric Team",0.3862208098107469,0.35,0.36811040490537345,Structure: Document format issues; Missing required keywords | Clinical: Sex-diagnosis mismatch (sex_score: 0.40)
+1,"**Name:** John Doe
+**Unit No:** 5314456
+**Admission Date:** 2024-06-15
+**Discharge Date:** 2024-07-04
+
+**Date of Birth:** 1990-04-21
+**Sex:** M
+
+**Service:** NEUROLOGY
+
+**Allergies:**
+No Known Allergies / Adverse Drug Reactions
+
+**Attending:** Dr. Emily Chen
+
+**Discharge Medications:**
+
+1. **Lamotrigine 200 mg PO BID**: for management of partial seizures
+2. **Levetiracetam 500 mg PO TID**: for management of partial seizures
+3. **Acetaminophen 650 mg PO Q6H**: for pain and fever control
+
+**Discharge Disposition:**
+Home with family support
+
+**Discharge Diagnosis:**
+Primary diagnosis: **Epilepsy, generalized**, specified as focal impaired awareness seizures (FIA) (ICD-10 code G40.3)
+Secondary diagnoses: **Headache disorder**, unspecified (ICD-10 code R51.9)
+
+**Discharge Condition:**
+Mental Status: Clear and coherent.
+Level of Consciousness: Alert and interactive.
+Activity Status: Ambulatory - Independent.
+
+**Discharge Instructions:**
+
+Dear Mr. Doe,
+
+You were admitted to the hospital after a series of seizures. We have started you on medications to control your seizure activity and improve your quality of life.
+
+Please follow up with your primary care doctor as an outpatient and continue all of your home medications unless specifically instructed to stop by your doctor.
+
+Please call your doctor or return to the emergency department if you experience any of the following:
+- New onset of seizures, worsening of seizure frequency or severity
+- Any other worrisome symptoms that you feel your doctor should know about
+
+Thank you for allowing us to participate in your care,
+Your Edwards Neurology Team
+
+**Followup Instructions:**
+Schedule a follow-up appointment with Dr. Emily Chen in 2 weeks to monitor progress and adjust treatment plan as needed, or sooner if symptoms worsen or new concerns arise.",0.287630276835841,0.55,0.4188151384179205,Structure: Document format issues; Missing required keywords | Clinical: Failed to extract age
+2,"**Name:** John Smith
+
+**Unit No.:** 1234567
+
+**Admission Date:** 2024-06-20              **Discharge Date:**   2024-07-10
+
+**Date of Birth:** 1956-08-10             **Sex:**   M
+
+**Service:** ORTHOPEDICS
+
+**Allergies:**
+
+* No Known Allergies / Adverse Drug Reactions
+
+**Attending:** Dr. Emily Chen
+
+**Discharge Medications:**
+1. Acetaminophen 500 mg PO Q4H (for pain management)
+2. Cephalexin 500 mg PO BID (to prevent infection post-surgery)
+
+**Discharge Instructions:**
+
+Dear Mr. Smith,
+
+You were admitted to the hospital for a right hip replacement surgery.
+The surgical team performed the procedure successfully, and you are now ready for discharge.
+
+Please follow up with your primary care doctor as an outpatient and continue all of your home medications unless specifically instructed to stop by your doctor.
+
+To manage your pain at home:
+
+- Take 1 tablet of Acetaminophen 500 mg every 4 hours as needed for pain.
+- Apply ice packs to the surgical site as directed.
+
+Please call your doctor or return to the emergency department if you experience any of the following:
+- Redness, swelling, increased pain, or drainage from the incision site
+- Fever above 101.5°F (38.6°C)
+- Difficulty moving the hip joint
+
+Thank you for allowing us to participate in your care,
+Your Orthopedic Team
+
+**Followup Instructions:**
+Schedule a follow-up appointment with Dr. Emily Chen in 2 weeks to monitor progress and adjust treatment plan as needed, or sooner if symptoms worsen or new concerns arise.
+
+Note: The medications listed are based on the assumption that the patient has no underlying medical conditions that may interact with these medications. Always verify medication lists with the patient's medical history and consult a healthcare professional for specific guidance.",0.24748880009389734,0.55,0.39874440004694867,Structure: Document format issues; Missing required keywords | Clinical: Failed to extract age
+3,"**Patient Demographics**
+Name: John Doe                Unit No:   5321234
+ 
+Admission Date:  2024-06-15              Discharge Date:   2024-07-04
+ 
+Date of Birth:  1968-07-11             Sex:   M
+ 
+Service: UROLOGY
+ 
+Allergies: 
+No Known Allergies / Adverse Drug Reactions
+ 
+Attending: Dr. Emily Chen
+
+**Discharge Medications**
+1. Tamsulosin 0.4 mg PO DAILY
+2. Flomax 0.4 mg is the generic name for Tamsulosin, and this patient was prescribed a standard dose of 0.4mg daily.
+3. Ciprofloxacin 500 mg PO BID:PRN UTI
+   - The medication matches the diagnosis, but we must consider an alternative if antibiotics are not necessary.
+
+**Hospital Course**
+The patient was admitted with acute urinary retention and underwent a urodynamic study to rule out neurological causes of bladder dysfunction. He has a history of benign prostatic hyperplasia (BPH) and was prescribed tamsulosin for symptomatic relief. However, he developed an uncomplicated urinary tract infection (UTI) that required antibiotic treatment.
+
+**Discharge Diagnosis**
+Primary diagnosis:  Benign Prostatic Hyperplasia with Acute Urinary Retention
+Secondary diagnoses:  Uncomplicated Urinary Tract Infection
+
+**Discharge Condition**
+Mental Status: Clear and coherent.
+Level of Consciousness: Alert and interactive.
+Activity Status: Ambulatory - Independent.
+
+**Discharge Instructions**
+Dear Mr. Doe,
+
+You were admitted to the hospital with urinary retention due to an enlarged prostate gland. We have prescribed tamsulosin to help alleviate symptoms. You also developed a urinary tract infection that we treated with antibiotics.
+
+Please follow up with your primary care doctor as an outpatient and continue all of your home medications unless specifically instructed to stop by your doctor. 
+
+Please call your doctor or return to the emergency department if you experience any of the following:
+- New onset of difficulty urinating, painful urination, fever, chills.
+- Any other worrisome symptoms that you feel your doctor should know about.
+
+Thank you for allowing us to participate in your care,
+Your Urology Team
+
+**Followup Instructions**
+Schedule a follow-up appointment with Dr. Emily Chen in 1 week to monitor progress and adjust treatment plan as needed, or sooner if symptoms worsen or new concerns arise.",0.6385539160402834,0.55,0.5942769580201417,Structure: Document format issues; Missing required keywords
+4,"**Patient Demographics**
+
+Name:  James Wilson                            Unit No:   5314456
+ 
+Admission Date:  2024-06-10              Discharge Date:   2024-07-02
+ 
+Date of Birth:  1951-03-16             Sex:   M
+ 
+Service: CARDIOLOGY
+
+**Admission Diagnosis**
+Acute Coronary Syndrome (ACS)
+
+**Discharge Diagnosis**
+
+Primary diagnosis:  Acute Coronary Syndrome
+Secondary diagnoses:  Hypertension, Hyperlipidemia, Atrial Fibrillation
+
+**Hospital Course**
+The patient was admitted with chest pain and electrocardiogram (ECG) changes consistent with an acute coronary syndrome. The patient underwent a cardiac catheterization which showed significant stenosis in the left anterior descending artery. The patient was stabilized on medications and underwent percutaneous coronary intervention (PCI).
+
+**Discharge Medications**
+1. Aspirin 81 mg PO DAILY 
+2. Clopidogrel 75 mg PO DAILY 
+3. Metoprolol Succinate XL 50 mg PO DAILY 
+4. Lisinopril 20 mg PO DAILY 
+5. Simvastatin 40 mg PO DAILY 
+6. Warfarin 5 mg PO DAILY 
+
+**Discharge Instructions**
+Dear Mr. Wilson,
+
+You were admitted to the hospital after experiencing chest pain and changes on your ECG.
+The cardiologists felt that you had a heart attack, but they were able to fix the blockage in your artery
+with a stent.
+
+Please follow up with your primary care doctor as an outpatient and 
+continue all of your home medications unless specifically instructed 
+to stop by your doctor. 
+
+Please call your doctor or return to the emergency department if you 
+experience any of the following:
+- New onset of chest pain, shortness of breath, or swelling in legs.
+- Any other worrisome symptoms that you feel your doctor should know 
+about.
+
+Thank you for allowing us to participate in your care,
+Your Edwards Cardiology Team
+
+**Followup Instructions**
+Schedule a follow-up appointment with Dr. Emily Chen in 2 weeks to monitor progress and adjust treatment plan as needed, or sooner if symptoms worsen or new concerns arise.",0.41065959174495764,0.8,0.6053297958724788,Structure: Document format issues; Missing required keywords
+5,"### PATIENT PROFILE:
+
+**Name:** John Doe
+**Unit No.:** 1234567
+**Admission Date:** 2024-06-20
+**Discharge Date:** 2024-07-10
+**Date of Birth:** 1950-04-11
+**Sex:** Male
+**Service:** NEUROLOGY
+
+### ALLERGIES:
+
+No Known Allergies / Adverse Drug Reactions
+
+### ATTENDING:
+
+Dr. Emily Chen
+
+### DISCHARGE DIAGNOSIS:
+
+Primary diagnosis: **Mild Transient Ischemic Attack (TIA)**
+Secondary diagnoses:  Hypertension, Hyperlipidemia, Diabetes Mellitus Type II
+
+### HOSPITAL COURSE:
+The patient was admitted with symptoms of transient weakness in the right arm and leg. Initial evaluation revealed a high blood pressure reading of 180/100 mmHg. Further investigations included an MRI scan of the brain which showed minor ischemic changes without any acute hemorrhage. The patient's condition remained stable throughout his stay, and he made significant improvement with treatment.
+
+### DISCHARGE MEDICATIONS:
+
+1. Aspirin 81 mg PO DAILY
+2. Metoprolol Succinate XL 50 mg PO DAILY
+3. Lisinopril 20 mg PO DAILY
+4. Simvastatin 40 mg PO DAILY
+5. Atorvastatin 10 mg PO DAILY
+6. Levothyroxine 100 mcg PO DAILY
+
+### DISCHARGE INSTRUCTIONS:
+
+Dear Mr. Doe,
+
+You were admitted to the hospital after experiencing weakness in your right arm and leg, which is commonly known as a Transient Ischemic Attack (TIA). Your high blood pressure was brought under control with medication, and you have been started on medications to lower your cholesterol levels.
+
+Please follow up with your primary care doctor as an outpatient and continue all of your home medications unless specifically instructed to stop by your doctor. 
+
+Please call your doctor or return to the emergency department if you experience any of the following:
+- New onset of weakness, numbness, tingling in your arms or legs.
+- Difficulty speaking or understanding speech.
+- Any other worrisome symptoms that you feel your doctor should know about.
+
+Thank you for allowing us to participate in your care,
+Your Edwards Neurology Team
+
+### FOLLOWUP INSTRUCTIONS:
+
+Schedule a follow-up appointment with Dr. Emily Chen in 2 weeks to monitor progress and adjust treatment plan as needed, or sooner if symptoms worsen or new concerns arise.",0.26302918395539715,0.35,0.3065145919776986,Structure: Document format issues; Missing required keywords | Clinical: Failed to extract age
+6,"**Patient Demographics**
+
+Name: Emily Wilson  
+Unit No.: 5321478  
+Admission Date: 2024-07-10  
+Discharge Date: 2024-07-15  
+Date of Birth: 1980-08-19  
+Sex: Female  
+Service: ORTHOPEDICS  
+
+**Admission Diagnosis**
+
+Acute Patellar Fracture with Posterior Displacement (S82.111A) 
+
+**Hospital Course**
+
+Emily Wilson, a 45-year-old female patient, was admitted to the Orthopedics service after sustaining an acute patellar fracture during a fall. The patient underwent successful reduction and stabilization of the fracture using intramedullary nailing. Post-operatively, she received pain management and physical therapy.
+
+**Discharge Medications**
+
+1. Amoxicillin 500 mg PO TID for 7 days  
+2. Acetaminophen 650 mg PO Q6H as needed for pain control  
+3. Ibuprofen 400 mg PO BID as needed for inflammation  
+
+**Discharge Instructions**
+
+Dear Emily,
+
+You were admitted to the hospital after a fall caused an acute patellar fracture. The orthopedic surgeons performed surgery to stabilize and align your knee properly.
+
+Please follow up with your primary care doctor in 2 weeks to monitor progress and adjust treatment plan as needed. In the meantime, please:
+
+- Continue all of your home medications unless specifically instructed to stop by your doctor.
+- Attend physical therapy sessions for post-operative recovery and rehabilitation of your knee joint.
+- Avoid heavy lifting, bending, or strenuous activities until further notice.
+
+If you experience any of the following, please call your doctor or return to the emergency department:
+
+- Increasing pain or swelling in your knee
+- Difficulty walking or bearing weight on your leg
+- Infection signs such as redness, warmth, or purulent discharge around the surgical site
+
+Thank you for allowing us to participate in your care,
+
+Your Edwards Orthopedics Team  
+
+**Followup Instructions**
+
+Schedule a follow-up appointment with Dr. Maria Rodriguez in 2 weeks to monitor progress and adjust treatment plan as needed, or sooner if symptoms worsen or new concerns arise.",0.42067860546175356,0.15,0.28533930273087676,Structure: Document format issues; Missing required keywords
+7,"**Name:** Emily Wilson  
+**Unit No.:**  2345678 
+**Date of Birth:** 2022-01-21
+**Sex:** Female
+**Service:** Pediatrics
+**Admission Diagnosis:** Impetigo (B35.3)
+**Discharge Date:** 2024-07-03
+
+**Allergies:**
+No Known Allergies / Adverse Drug Reactions
+
+**Attending:** Dr. Rachel Lee
+
+
+### Discharge Medications:
+• Amoxicillin 125 mg PO TID for 7 days  
+• Hydrocortisone cream (1%) applied topically BID to affected areas  
+• Chlorhexidine gluconate 0.5% solution applied as a skin cleanser after bathing and before applying hydrocortisone cream  
+
+### Hospital Course:
+Patient admitted with impetigo, a bacterial infection of the skin. The patient was treated with topical antibiotics and oral Amoxicillin to cover for potential streptococcal or staphylococcal infections.
+
+
+### Discharge Instructions:
+
+Dear Emily's Parents,
+
+Emily was diagnosed with impetigo, a common skin infection in children.
+To treat this condition at home:
+1. Apply hydrocortisone cream (1%) BID to the affected areas for 7-10 days.
+2. Clean and disinfect the affected area with chlorhexidine gluconate solution after bathing and before applying the cream.
+
+Please call our office if you notice any worsening of symptoms or if new lesions appear.
+Continue giving Emily Amoxicillin (125 mg PO TID) for the next 5 days as prescribed, unless otherwise instructed by your pediatrician.
+
+Thank you for entrusting us with Emily's care,
+Your Pediatrics Team
+
+
+### Follow-up Instructions:
+Schedule a follow-up appointment with Dr. Rachel Lee in 3-4 days to assess progress and adjust treatment plan as needed, or sooner if symptoms worsen or new concerns arise.",0.22652336101786658,0.35,0.2882616805089333,Structure: Document format issues; Missing required keywords | Clinical: Failed to extract age
+8,"**Name:** John Doe
+**Unit No.:** 2023001
+**Admission Date:** 2023-09-10
+**Discharge Date:** 2023-09-15
+**Date of Birth:** 1979-08-30
+**Sex:** Male
+**Service:** NEUROLOGY
+
+**Allergies:**
+No Known Allergies / Adverse Drug Reactions
+
+**Attending:** Dr. Emily Chen
+
+**Discharge Medications:**
+
+1. **Lamotrigine 200 mg PO BID**: To control seizures and prevent future episodes.
+2. **Gabapentin 600 mg PO TID**: For nerve pain management and sleep improvement.
+
+**Hospital Course:**
+Mr. Doe was admitted to the hospital with a history of complex partial seizures. He underwent extensive neurological evaluation, including EEG and MRI scans, which confirmed the diagnosis. During his stay, he experienced one seizure episode that responded well to medication administration. He demonstrated significant improvement in seizure control and nerve pain management.
+
+**Discharge Diagnosis:**
+Primary diagnosis: **Complex Partial Seizures (F80.3)**
+Secondary diagnoses: **Hypertension (I10), Hyperlipidemia (E78.5)**
+
+**Discharge Condition:**
+Mental Status: Clear and coherent.
+Level of Consciousness: Alert and interactive.
+Activity Status: Ambulatory - Independent.
+
+**Discharge Instructions:**
+
+Dear Mr. Doe,
+
+We are pleased to discharge you from the hospital after a successful stay. You have demonstrated significant improvement in seizure control and nerve pain management. It is essential that you continue your current medication regimen as prescribed below.
+
+Please follow up with your primary care doctor as an outpatient and continue all of your home medications unless specifically instructed to stop by your doctor.
+
+Please call your doctor or return to the emergency department if you experience any of the following:
+- New onset of seizures, worsening of seizure frequency, or increased severity
+- Any other worrisome symptoms that you feel your doctor should know about
+
+Thank you for allowing us to participate in your care,
+Your Edwards Neurology Team
+
+**Followup Instructions:**
+Schedule a follow-up appointment with Dr. Emily Chen in 1 month to monitor progress and adjust treatment plan as needed, or sooner if symptoms worsen or new concerns arise.",0.276069617394757,0.55,0.4130348086973785,Structure: Document format issues; Missing required keywords | Clinical: Failed to extract age
+9,"**Patient Demographics**
+
+Name: John Doe
+Unit No: 1234567
+Admission Date: 2024-06-10
+Discharge Date: 2024-07-01
+Date of Birth: 1951-11-17
+Sex: Male
+Service: UROLOGY
+
+**Admission Diagnosis**
+Benign Prostatic Hyperplasia (BPH)
+
+**Hospital Course**
+
+The patient was admitted for evaluation and management of symptoms related to Benign Prostatic Hyperplasia. During his stay, he underwent a series of tests including urinalysis, PSA levels, and prostate imaging studies. The patient's symptoms improved significantly with treatment.
+
+**Discharge Medications:**
+
+1. Tamsulosin 0.4 mg PO QD
+2. Flutamide 250 mg PO BID
+
+**Discharge Instructions:**
+
+Dear Mr. Doe,
+
+You were admitted to the hospital for evaluation and management of your prostate issues.
+Your urologist has prescribed medication to help alleviate symptoms.
+Please follow up with your primary care doctor as an outpatient and continue all of your home medications unless specifically instructed to stop by your doctor.
+
+Please call your doctor or return to the emergency department if you experience any of the following:
+- Increased urinary frequency, urgency, or difficulty starting urination
+- Blood in your urine or semen
+- Painful ejaculation
+
+Thank you for allowing us to participate in your care,
+Your Urology Team
+
+
+**Followup Instructions:**
+
+Schedule a follow-up appointment with Dr. Rachel Kim in 2 weeks to monitor progress and adjust treatment plan as needed, or sooner if symptoms worsen or new concerns arise.",0.5821301806514549,0.55,0.5660650903257275,Structure: Document format issues; Missing required keywords
+10,"**Name:** Sofia Rodriguez  
+**Unit No:** 1234567  
+
+**Admission Date:** 2024-06-10              **Discharge Date:**   2024-07-01  
+
+**Date of Birth:** 2009-04-23             **Sex:**   F  
+
+**Service:** PEDIATRICS  
+
+**Allergies:**
+No Known Allergies / Adverse Drug Reactions
+
+**Attending:** Dr. Emily Chen
+
+**Discharge Medications:**
+1. Cephalexin 500 mg PO QID  
+2. Metoclopramide 5 mg PO TID 
+
+**Discharge Instructions:**
+
+Dear Sofia,
+
+You were admitted to the hospital for a diagnosis of Acute Pharyngitis, which was confirmed by throat culture and rapid antigen test.
+
+Please follow up with your primary care doctor as an outpatient and continue all of your home medications unless specifically instructed to stop by your doctor.
+
+Take the antibiotics exactly as directed (4 times a day) for 10 days. Make sure to complete the full course even if symptoms improve before finishing the medication.
+
+Also, take the anti-nausea medication as needed (up to 3 times a day) to help with any stomach upset from the antibiotic.
+
+If you experience any of the following, please contact your doctor or return to the emergency department:
+- New onset of difficulty swallowing
+- Increased difficulty breathing
+- Severe headache or stiff neck
+
+Thank you for allowing us to participate in your care,
+Your Pediatric Team
+
+**Followup Instructions:**
+Schedule a follow-up appointment with Dr. Emily Chen in 1 week to monitor progress and adjust treatment plan as needed, or sooner if symptoms worsen or new concerns arise.",0.24748880009389734,0.55,0.39874440004694867,Structure: Document format issues; Missing required keywords | Clinical: Failed to extract age
+11,"**Name:** Emily Wilson
+**Unit No.:** 6543211
+**Admission Date:** 2024-06-10
+**Discharge Date:** 2024-07-01
+**Date of Birth:** 1990-05-17
+**Sex:** Female
+**Service:** OBSTETRICS
+
+**Allergies:**
+No Known Allergies / Adverse Drug Reactions
+
+**Attending:** Dr. Rachel Kim
+
+**Discharge Medications:**
+
+1. Metronidazole 500 mg PO TID for 7 days to prevent postpartum endometritis
+2. Multivitamin tablet PO DAILY for postpartum nutritional support
+3. Hydrocortisone acetate 5 mg PO BID for 3 days, or until symptoms resolve, to treat postpartum hemorrhage
+
+**Discharge Diagnosis:**
+Primary diagnosis: Vaginal Delivery with Postpartum Hemorrhage
+Secondary diagnoses: None
+
+**Hospital Course:** The patient underwent a vaginal delivery and experienced postpartum hemorrhage. She was treated with uterine massage, oxytocin infusion, and finally, surgical intervention to control bleeding.
+
+**Discharge Instructions:**
+Dear Ms. Wilson,
+
+Congratulations on the birth of your baby! You were admitted to the hospital after experiencing excessive bleeding following delivery.
+The obstetricians and nurses took good care of you during your stay, and we are pleased to see that your condition has stabilized.
+
+Please follow up with your primary care doctor as an outpatient and continue all of your home medications unless specifically instructed to stop by your doctor. 
+
+Please call your doctor or return to the emergency department if you experience any of the following:
+- Excessive bleeding or spotting
+- Fever above 101°F (38°C)
+- Severe abdominal pain or cramping
+- Any other worrisome symptoms that you feel your doctor should know about.
+
+Thank you for allowing us to participate in your care,
+Your Obstetrics Team
+
+**Followup Instructions:**
+Schedule a follow-up appointment with Dr. Rachel Kim in 1 week to monitor progress and adjust treatment plan as needed, or sooner if symptoms worsen or new concerns arise.",0.26302918395539715,0.35,0.3065145919776986,Structure: Document format issues; Missing required keywords | Clinical: Failed to extract age
+12,"**Name:** Elizabeth Johnson  
+**Unit No.:** 1234567  
+**Admission Date:** 2024-07-10  
+**Discharge Date:** 2024-08-01  
+**Date of Birth:** 1951-06-24  
+**Sex:** Female  
+**Service:** UROLOGY  
+
+**Allergies:**
+No Known Allergies / Adverse Drug Reactions  
+
+**Attending:** Dr. Maria Rodriguez
+
+**Discharge Medications:**
+
+1. Tamsulosin 0.4 mg PO Daily
+2. Alprazolam 0.5 mg PO PRN anxiety or urinary urgency
+3. Oxybutynin Chloride 10 mg PO BID for urinary frequency and incontinence
+4. Senna 17.2 mg PO DAILY for constipation prevention
+
+**Discharge Disposition:** Home  
+**Discharge Diagnosis:**
+Primary diagnosis: Benign Prostatic Hyperplasia (BPH) with Overactive Bladder symptoms  
+Secondary diagnoses: Hypertension, Osteoporosis  
+
+**Discharge Condition:**
+Mental Status: Clear and coherent.
+Level of Consciousness: Alert and interactive.
+Activity Status: Ambulatory - Independent.
+
+**Discharge Instructions:**
+
+Dear Mrs. Johnson,
+
+You were admitted to the hospital for the management of your Benign Prostatic Hyperplasia (BPH) symptoms, including urinary frequency and incontinence. Your urologist has prescribed Tamsulosin to help relax your prostate muscles and improve urine flow.
+
+In addition to taking your medication as directed, please make sure to stay hydrated by drinking plenty of water throughout the day. This will help thin out your urine and reduce the frequency of bathroom trips.
+
+If you experience any of the following symptoms, please contact your doctor or return to the emergency department:
+
+* Severe pain in your back or abdomen
+* Difficulty starting or stopping urination
+* Fever over 101°F (38°C)
+* Blood in your urine
+
+Please schedule a follow-up appointment with Dr. Maria Rodriguez in 2 weeks to monitor progress and adjust treatment plan as needed, or sooner if symptoms worsen or new concerns arise.
+
+Thank you for allowing us to participate in your care,
+Your Urology Team",0.276069617394757,0.15,0.2130348086973785,Structure: Document format issues; Missing required keywords | Clinical: Failed to extract age
+13,"**Name:** Elizabeth Johnson                  **Unit No:**   5314456
+ 
+**Admission Date:** 2024-07-10              **Discharge Date:**   2024-07-20
+ 
+**Date of Birth:** 1950-05-21             **Sex:**   F
+ 
+**Service:** GENERAL_MEDICINE
+ 
+**Allergies:** 
+No Known Allergies / Adverse Drug Reactions
+ 
+**Attending:** Dr. Rachel Kim
+
+**Discharge Medications:**
+1. Lisinopril 10 mg PO DAILY
+2. Amlodipine 5 mg PO DAILY
+3. Metformin 500 mg PO BID
+4. Simvastatin 20 mg PO DAILY
+5. Omeprazole 20 mg PO DAILY
+
+**Discharge Diagnosis:**
+Primary diagnosis:  Hypertension, Type II Diabetes Mellitus
+Secondary diagnoses:  Hyperlipidemia
+
+**Discharge Condition:**
+Mental Status: Clear and coherent.
+Level of Consciousness: Alert and interactive.
+Activity Status: Ambulatory - Independent.
+
+**Discharge Instructions:**
+
+Dear Ms. Johnson,
+
+You were admitted to the hospital for management of your hypertension, type II diabetes mellitus, and hyperlipidemia.
+Your blood pressure is well-controlled with lisinopril and amlodipine. 
+You will continue metformin for your diabetes and simvastatin for cholesterol management.
+
+Please follow up with your primary care doctor as an outpatient and continue all of your home medications unless specifically instructed to stop by your doctor. 
+
+Please call your doctor or return to the emergency department if you experience any of the following:
+- New onset of chest pain, shortness of breath, dizziness.
+- Any other worrisome symptoms that you feel your doctor should know about.
+
+Thank you for allowing us to participate in your care,
+Your General Medicine Team
+ 
+**Followup Instructions:**
+Schedule a follow-up appointment with Dr. Rachel Kim in 2 weeks to monitor progress and adjust treatment plan as needed, or sooner if symptoms worsen or new concerns arise.",0.276069617394757,0.95,0.6130348086973785,Structure: Document format issues; Missing required keywords | Clinical: Failed to extract age
+14,"**Name:** Emily Wilson  
+**Unit No.:** 6452198  
+ 
+**Admission Date:** 2024-06-17  
+**Discharge Date:** 2024-07-05
+ 
+**Date of Birth:** 1989-05-27  
+**Sex:** F
+ 
+**Service:** OBSTETRICS
+ 
+**Allergies:**
+No Known Allergies / Adverse Drug Reactions
+ 
+**Attending:** Dr. Sophia Rodriguez
+
+**Discharge Medications:**
+1. Amoxicillin 500 mg PO TID for 7 days
+2. Metoclopramide 10 mg IM/PO Q6H x 3 doses to manage nausea and vomiting
+3. Oxybutynin 5 mg PO BID for urinary retention prevention
+
+**Discharge Instructions:**
+
+Dear Mrs. Wilson,
+
+You were admitted to the hospital with symptoms of preterm labor and fetal distress.
+Your healthcare team performed a series of tests, including an ultrasound to monitor your baby's health.
+
+Please follow up with your primary care doctor as an outpatient and continue all of your home medications unless specifically instructed to stop by your doctor.
+
+To prevent preterm labor and promote a healthy pregnancy:
+- Rest when needed
+- Avoid heavy lifting or bending 
+- Take your prescribed medication exactly as directed
+
+If you experience any of the following, please contact your healthcare provider immediately:
+- Fever above 101.5°F (38.6°C)
+- Vaginal bleeding or discharge
+- Contractions more than 4 in 10 minutes or lasting over 1 minute
+- Fetal movement changes or decreased fetal activity
+
+Thank you for trusting our obstetrics team with your care.
+Your Edwards Obstetrics Team
+
+**Follow-up Instructions:**
+Schedule a follow-up appointment with Dr. Sophia Rodriguez in 2 weeks to monitor progress and adjust treatment plan as needed, or sooner if symptoms worsen or new concerns arise.",0.22652336101786658,0.35,0.2882616805089333,Structure: Document format issues; Missing required keywords | Clinical: Failed to extract age
+15,"**Name:** Margaret Johnson
+**Unit No:** 9432145
+**Admission Date:** 2024-06-17
+**Discharge Date:** 2024-07-10
+**Date of Birth:** 1936-05-09
+**Sex:** F
+**Service:** CARDIOLOGY
+
+**Allergies:**
+No Known Allergies / Adverse Drug Reactions
+
+**Attending:** Dr. Rachel Kim
+
+**Discharge Medications:**
+
+1. Lisinopril 20 mg PO DAILY
+2. Metoprolol Succinate XL 50 mg PO DAILY
+3. Aspirin 81 mg PO DAILY
+4. Atorvastatin 40 mg PO DAILY
+5. Furosemide 40 mg PO BID
+
+**Discharge Diagnosis:**
+Primary diagnosis: **I21.9 (Myocardial infarction, unspecified)**
+Secondary diagnoses: **Hypertension (I10), Hyperlipidemia (E78.5)**
+
+**Discharge Condition:**
+Mental Status: Clear and coherent.
+Level of Consciousness: Alert and interactive.
+Activity Status: Ambulatory - Independent.
+
+**Discharge Instructions:**
+
+Dear Mrs. Johnson,
+
+You were admitted to the hospital after experiencing a myocardial infarction, which was confirmed by an ECG and subsequent cardiac enzymes. You underwent thorough evaluation and received appropriate management according to current guidelines.
+
+Please follow up with your primary care doctor as an outpatient and continue all of your home medications unless specifically instructed to stop by your doctor.
+
+Please call your doctor or return to the emergency department if you experience any of the following:
+- New onset of chest pain, shortness of breath, dizziness, or lightheadedness.
+- Any other worrisome symptoms that you feel your doctor should know about.
+
+Thank you for allowing us to participate in your care,
+Your Cardiology Team
+
+**Followup Instructions:**
+Schedule a follow-up appointment with Dr. Rachel Kim in 2 weeks to monitor progress and adjust treatment plan as needed, or sooner if symptoms worsen or new concerns arise.",0.276069617394757,0.55,0.4130348086973785,Structure: Document format issues; Missing required keywords | Clinical: Failed to extract age
+16,"**Name:** Mr. John Smith  
+**Unit No.:** 5314446  
+ 
+**Admission Date:** 2024-06-17              **Discharge Date:**   2024-07-05
+ 
+**Date of Birth:** 1951-09-05             **Sex:**   M
+ 
+**Service:** NEUROLOGY
+ 
+**Allergies:**
+No Known Allergies / Adverse Drug Reactions
+ 
+**Attending:** Dr. Sophia Lee
+
+**Discharge Medications:**
+
+*   Levetiracetam 500 mg PO BID
+*   Gabapentin 600 mg PO TID
+*   Aspirin 81 mg PO DAILY
+*   Lisinopril 20 mg PO DAILY
+*   Atorvastatin 40 mg PO DAILY
+
+**Discharge Disposition:**
+Home
+ 
+**Discharge Diagnosis:**
+Primary diagnosis:  Acute Ischemic Cerebrovascular Event (AICE)
+Secondary diagnoses:  Hypertension, Hyperlipidemia
+
+ 
+**Discharge Condition:**
+Mental Status: Clear and coherent.
+Level of Consciousness: Alert and interactive.
+Activity Status: Ambulatory - Independent.
+
+ 
+**Discharge Instructions:**
+
+Dear Mr. Smith,
+
+You were admitted to the hospital after a CT scan showed an ischemic stroke in your left hemisphere.
+The neurologists felt that you did not need surgery at this time, but
+you will be followed by the neurologists for any changes or worsening of
+your symptoms.
+
+Please follow up with your primary care doctor as an outpatient and 
+continue all of your home medications unless specifically instructed 
+to stop by your doctor. 
+
+Please call your doctor or return to the emergency department if you 
+experience any of the following:
+- New onset of weakness, numbness, tingling, seizures, difficulty
+with speech or movement.
+- Any other worrisome symptoms that you feel your doctor should know
+about.
+
+Thank you for allowing us to participate in your care,
+Your Edwards Neurology Team
+ 
+**Followup Instructions:**
+Schedule a follow-up appointment with Dr. Sophia Lee in 1 week to monitor progress and adjust treatment plan as needed, or sooner if symptoms worsen or new concerns arise.",0.287630276835841,0.85,0.5688151384179205,Structure: Document format issues; Missing required keywords | Clinical: Failed to extract age
+17,"**Name:** Emily J. Lee  
+**Unit No.:** 1234567  
+
+**Admission Date:** 2024-05-20             **Discharge Date:**   2024-06-15  
+
+**Date of Birth:** 1957-02-01           **Sex:**   F  
+
+**Service:** ORTHOPEDICS  
+
+**Allergies:**  
+No Known Allergies / Adverse Drug Reactions  
+
+**Attending:** Dr. Rachel Kim
+
+**Discharge Medications:**
+1. Acetaminophen 500 mg PO Q6H 
+2. Cephalexin 250 mg PO BID (post-operative infection prophylaxis)
+3. Ibuprofen 400 mg PO TID as needed for pain
+
+**Discharge Diagnosis:**  
+Primary diagnosis:   Posterior Hip Replacement - Revision Surgery
+Secondary diagnoses:  Osteoarthritis, Obesity Class I
+
+**Discharge Condition:**  
+Mental Status: Clear and coherent.
+Level of Consciousness: Alert and interactive.
+Activity Status: Ambulatory with assistance.
+
+**Discharge Instructions:**
+
+Dear Ms. Lee,
+
+Your revision hip replacement surgery was successful. The orthopedic team will continue to monitor your progress and manage any discomfort or pain as needed.
+
+Please follow these instructions carefully:
+- Take all medications exactly as directed, do not skip doses.
+- Keep the wound dressing dry until your follow-up appointment with Dr. Kim.
+- Use a walker for support when walking to prevent falls.
+- Avoid heavy lifting, bending, or strenuous activities for 6 weeks post-op.
+
+Please call our office or return to the emergency department if you experience any of the following:
+- Increased pain or swelling
+- Redness or discharge from the wound site
+- Fever over 101.5°F (38.6°C)
+- Difficulty walking or bearing weight
+
+Thank you for trusting us with your care,
+Your Orthopedic Team at Edwards Hospital
+
+**Followup Instructions:**  
+Schedule a follow-up appointment with Dr. Rachel Kim in 2 weeks to monitor progress and adjust treatment plan as needed, or sooner if symptoms worsen or new concerns arise.",0.276069617394757,0.9,0.5880348086973786,Structure: Document format issues; Missing required keywords | Clinical: Failed to extract age
+18,"**Name:** Emily Lee  
+**Unit No.:** 1234567  
+ 
+**Admission Date:** 2024-06-15              **Discharge Date:**   2024-07-10
+ 
+**Date of Birth:** 2017-05-04            **Sex:**    F
+ 
+**Service:** PEDIATRICS
+ 
+**Allergies:**
+No Known Allergies / Adverse Drug Reactions
+ 
+**Attending:** Dr. Maria Rodriguez
+
+**Discharge Medications:**
+
+1. Cefdinir 14 mg/kg PO BID
+2. Diphenhydramine 5 mg/kg PO QHS PRN
+3. Ibuprofen 10 mg/kg PO Q4H PRN
+
+**Discharge Instructions:**
+Dear Emily's Parents,
+
+Emily was admitted to the hospital with a diagnosis of Pneumonia (Primary diagnosis) and Allergic Rhinitis (Secondary diagnosis).
+
+She received appropriate treatment during her stay, including antibiotics and management of symptoms.
+
+Please continue all medications as directed by your pediatrician unless specifically instructed to stop. 
+
+Monitor for any signs of worsening respiratory symptoms or allergic reactions. Contact your pediatrician immediately if you notice:
+
+- Increased difficulty breathing
+- Worsening cough or fever
+- Signs of anaphylaxis (hives, swelling, difficulty breathing)
+ 
+Thank you for trusting us with Emily's care,
+Your Pediatric Team
+ 
+**Followup Instructions:**
+Schedule a follow-up appointment with Dr. Rodriguez in 1 week to monitor progress and adjust treatment plan as needed, or sooner if symptoms worsen or new concerns arise.",0.24748880009389734,0.35,0.2987444000469487,Structure: Document format issues; Missing required keywords | Clinical: Failed to extract age
+19,"**Name:** John Doe  
+**Unit No.:** 1234567  
+ 
+**Admission Date:** 2024-06-14              **Discharge Date:**   2024-07-03
+ 
+**Date of Birth:** 1965-08-17             **Sex:**   M
+ 
+**Service:** GENERAL_MEDICINE
+ 
+**Allergies:**
+No Known Allergies / Adverse Drug Reactions
+ 
+**Attending:** Dr. Emily Chen
+
+**Discharge Medications:**
+
+1. Amoxicillin 500 mg PO TID for 7 days
+2. Albuterol Inhaler 90 mcg (metered dose) via inhalation Q8H as needed for bronchospasm
+3. Simvastatin 20 mg PO DAILY
+4. Lisinopril 10 mg PO DAILY
+
+**Discharge Diagnosis:**
+Primary diagnosis: **Acute Bronchitis** (J02.0)
+Secondary diagnoses: **Hypertension** (I10), **Hyperlipidemia** (E78.5)
+
+**Discharge Condition:**
+Mental Status: Clear and coherent.
+Level of Consciousness: Alert and interactive.
+Activity Status: Ambulatory - Independent.
+
+**Discharge Instructions:**
+
+Dear Mr. Doe,
+
+You were admitted to the hospital with symptoms of acute bronchitis, including cough and shortness of breath.
+The medical team has treated your condition with antibiotics and bronchodilators.
+Please follow up with your primary care doctor as an outpatient and 
+continue all of your home medications unless specifically instructed 
+to stop by your doctor. 
+
+Please call your doctor or return to the emergency department if you 
+experience any of the following:
+- Worsening cough, shortness of breath, chest pain, or fever.
+- Any other worrisome symptoms that you feel your doctor should know about.
+
+Thank you for allowing us to participate in your care,
+Your General Medicine Team
+ 
+**Followup Instructions:**
+Schedule a follow-up appointment with Dr. Emily Chen in 1 week to monitor progress and adjust treatment plan as needed, or sooner if symptoms worsen or new concerns arise.",0.276069617394757,0.85,0.5630348086973784,Structure: Document format issues; Missing required keywords | Clinical: Failed to extract age
+20,"**Patient Demographics**
+
+Name: Emily Wilson
+Date of Birth: 1978-08-31
+Sex: F
+Age: 47 (years)
+Unit No.: 5314451
+
+**Admission Diagnosis**
+Acute Coronary Syndrome with ST-Elevation Myocardial Infarction (STEMI)
+
+**Discharge Diagnosis**
+Primary diagnosis: STEMI, Secondary diagnoses: Hypertension, Hypercholesterolemia
+
+**Hospital Course**
+Patient was admitted to the hospital after experiencing chest pain and shortness of breath. ECG revealed a STEMI in the anterior wall of the left ventricle. Patient underwent immediate coronary angiography, which showed 100% occlusion of the LAD artery. Successful primary percutaneous coronary intervention (PCI) was performed to restore blood flow.
+
+**Discharge Medications**
+
+1. Aspirin 81 mg PO DAILY
+2. Clopidogrel 75 mg PO DAILY
+3. Metoprolol Succinate XL 25 mg PO DAILY
+4. Lisinopril 10 mg PO DAILY
+5. Simvastatin 20 mg PO DAILY
+
+**Discharge Instructions**
+
+Dear Ms. Wilson,
+
+You were admitted to the hospital after experiencing a heart attack (STEMI). The cardiologists felt that you had a complete blockage of one of your coronary arteries, which was successfully treated with a procedure called PCI.
+
+Please follow up with your primary care doctor as an outpatient and continue all of your home medications unless specifically instructed to stop by your doctor. 
+
+Please call your doctor or return to the emergency department if you experience any of the following:
+- New onset of chest pain, shortness of breath, or swelling in your legs.
+- Any other worrisome symptoms that you feel your doctor should know about.
+
+Thank you for allowing us to participate in your care,
+Your Edwards Cardiology Team
+
+**Followup Instructions**
+Schedule a follow-up appointment with Dr. John Lee in 1 week to monitor progress and adjust treatment plan as needed, or sooner if symptoms worsen or new concerns arise.",0.19060297643069973,0.98,0.5853014882153499,Structure: Document format issues; Missing required keywords | Clinical: Failed to extract age
+21,"**Patient Demographics**
+
+Name: Emily Wilson
+Unit No: 1234567
+Admission Date: 2024-06-10
+Discharge Date: 2024-07-01
+Date of Birth: 1981-09-26
+Sex: F
+
+**Admission Diagnosis**
+Acute Bronchitis with Pneumonia
+
+**Discharge Diagnosis**
+Primary diagnosis: Acute Bronchitis with Pneumonia (J20.9)
+Secondary diagnoses: Hypertension, Hyperlipidemia
+
+**Hospital Course**
+Patient was admitted to the hospital for acute bronchitis and pneumonia. She received antibiotics (Ceftriaxone) and inhalers (Albuterol). Her symptoms improved, and she was able to be discharged.
+
+**Discharge Medications**
+
+1. Amoxicillin 500 mg PO TID
+2. Albuterol 90 mcg INH Q8H 
+3. Fluticasone Propionate NASAL 1 SPRY NU BID:PRN congestion 
+4. Prednisone 20 mg PO DAILY for 5 days
+
+**Discharge Instructions**
+
+Dear Emily,
+
+You were admitted to the hospital with acute bronchitis and pneumonia.
+The medications prescribed are to be taken as directed above.
+
+Please follow up with your primary care doctor in one week to monitor progress.
+Continue taking all of your home medications unless specifically instructed to stop by your doctor.
+
+Please call your doctor or return to the emergency department if you experience any of the following:
+- New onset of difficulty breathing, chest pain, or coughing up blood
+- Any other worrisome symptoms that you feel your doctor should know about
+
+Thank you for allowing us to participate in your care,
+Your Edwards Medical Team",0.39689664249785006,0.65,0.523448321248925,Structure: Document format issues; Missing required keywords | Clinical: Sex-diagnosis mismatch (sex_score: 0.40)
+22,"**Name:** Elizabeth Johnson
+**Unit No.:** 5314441
+**Admission Date:** 2024-06-10
+**Discharge Date:** 2024-07-03
+**Date of Birth:** 1952-07-03
+**Sex:** F
+**Service:** CARDIOLOGY
+
+**Allergies:**
+No Known Allergies / Adverse Drug Reactions
+
+**Attending:** Dr. Sophia Rodriguez
+
+**Discharge Medications:**
+
+* Amlodipine Besylate 10 mg PO DAILY
+* Atorvastatin 80 mg PO DAILY
+* Aspirin 81 mg PO DAILY
+* Furosemide 40 mg PO BID
+* Lisinopril 20 mg PO DAILY
+
+**Discharge Diagnosis:**
+
+Primary diagnosis: Chronic Atrial Fibrillation with Paroxysmal Supraventricular Tachycardia
+Secondary diagnoses: Hypertension, Hyperlipidemia
+
+**Discharge Condition:**
+Mental Status: Clear and coherent.
+Level of Consciousness: Alert and interactive.
+Activity Status: Ambulatory - Independent.
+
+**Discharge Instructions:**
+
+Dear Ms. Johnson,
+
+You were admitted to the hospital for management of atrial fibrillation with rapid ventricular response and hypertension. After thorough evaluation, we have initiated treatment with amlodipine besylate, atorvastatin, aspirin, furosemide, and lisinopril.
+
+Please follow up with your primary care doctor as an outpatient and continue all of your home medications unless specifically instructed to stop by your doctor. It is essential to maintain a consistent medication regimen to manage your conditions effectively.
+
+Please call your doctor or return to the emergency department if you experience any of the following:
+- Symptoms of worsening atrial fibrillation, such as palpitations, shortness of breath, or chest pain
+- Signs of decompensated heart failure, including weight gain, orthopnea, or peripheral edema
+
+Thank you for allowing us to participate in your care,
+Your Cardiology Team
+
+**Followup Instructions:**
+Schedule a follow-up appointment with Dr. Sophia Rodriguez in 2 weeks to monitor progress and adjust treatment plan as needed, or sooner if symptoms worsen or new concerns arise.",0.276069617394757,0.45,0.3630348086973785,Structure: Document format issues; Missing required keywords | Clinical: Failed to extract age
+23,"**Patient Demographics**
+
+Name: Emily Wilson                  Unit No:   5314478
+Admission Date:  2024-07-10              Discharge Date:   2024-07-15
+Date of Birth:  1986-08-11             Sex:   F
+Service: OBSTETRICS
+
+**Admission Diagnosis**
+Postpartum Hemorrhage (PPH)
+
+**Discharge Diagnosis**
+Primary diagnosis: Postpartum Hemorrhage (PPH)
+Secondary diagnoses: None
+
+**Hospital Course**
+Patient was admitted to the labor and delivery unit at 38 weeks gestation. The patient delivered a healthy baby via vaginal delivery without complications. However, the patient experienced excessive bleeding post-delivery, requiring transfusion of two units of packed red blood cells. The patient's condition stabilized after administration of uterotonic medications.
+
+**Discharge Medications**
+1. Oxybutynin 10 mg PO QID
+2. Metoclopramide 5 mg PO TID
+3. Ibuprofen 400 mg PO BID
+
+**Discharge Instructions**
+
+Dear Ms. Wilson,
+
+Congratulations on the safe delivery of your baby! You were admitted to the hospital after experiencing excessive bleeding post-delivery. The uterotonics administered helped control the bleeding, and you have been stabilized.
+
+Please follow up with your primary care doctor as an outpatient and continue all of your home medications unless specifically instructed to stop by your doctor.
+
+Please call your doctor or return to the emergency department if you experience any of the following:
+- Increased vaginal bleeding
+- Fever above 101.5°F (38.6°C)
+- Abdominal pain or tenderness
+
+Thank you for allowing us to participate in your care,
+Your Obstetrics Team
+
+**Followup Instructions**
+Schedule a follow-up appointment with Dr. Rachel Lee in 2 weeks to monitor progress and adjust treatment plan as needed, or sooner if symptoms worsen or new concerns arise.",0.3862208098107469,0.6,0.49311040490537345,Structure: Document format issues; Missing required keywords | Clinical: Sex-diagnosis mismatch (sex_score: 0.40)
+24,"**Name:** John Smith
+**Unit No:** 5314445
+**Admission Date:** 2024-06-10
+**Discharge Date:** 2024-07-02
+**Date of Birth:** 1956-08-03
+**Sex:** Male
+**Service:** NEUROLOGY
+
+**Allergies:**
+No Known Allergies / Adverse Drug Reactions
+
+**Attending:** Dr. Emma Taylor
+
+**Discharge Medications:**
+1. Levetiracetam 1000 mg PO BID for seizure management
+2. Gabapentin 600 mg PO TID for neuropathic pain control
+3. Aspirin 81 mg PO DAILY for antiplatelet therapy
+4. Simvastatin 20 mg PO DAILY for dyslipidemia management
+
+**Discharge Disposition:**
+Home
+
+**Discharge Diagnosis:**
+Primary diagnosis:  Chronic Tension-Type Headache
+Secondary diagnoses:  Hypertension, Hyperlipidemia
+
+**Discharge Condition:**
+Mental Status: Clear and coherent.
+Level of Consciousness: Alert and interactive.
+Activity Status: Ambulatory - Independent.
+
+**Discharge Instructions:**
+
+Dear Mr. Smith,
+
+You were admitted to the hospital for management of your chronic tension-type headache. Your neurologist worked closely with our team to optimize your treatment plan.
+
+Please continue all of your home medications as instructed, including:
+- Levetiracetam 1000 mg PO BID
+- Gabapentin 600 mg PO TID (as needed for pain)
+- Aspirin 81 mg PO DAILY
+- Simvastatin 20 mg PO DAILY
+
+Please schedule a follow-up appointment with Dr. Emma Taylor in 2 weeks to monitor your progress and adjust treatment plan as needed.
+
+Do not hesitate to contact us if you experience any of the following:
+- New onset or worsening of headache symptoms
+- Difficulty with speech, movement, or coordination
+- Any other worrisome symptoms that you feel your doctor should know about
+
+Thank you for allowing us to participate in your care,
+Your Edwards Neurology Team",0.276069617394757,0.55,0.4130348086973785,Structure: Document format issues; Missing required keywords | Clinical: Failed to extract age
+25,"**Name:** John Smith  
+**Unit No:** 9876543  
+
+**Admission Date:** 2024-06-10              **Discharge Date:**   2024-07-02  
+
+**Date of Birth:** 1970-04-29             **Sex:**   M  
+
+**Service:** NEUROLOGY
+
+**Allergies:**  
+No Known Allergies / Adverse Drug Reactions
+
+**Attending:** Dr. Emily Chen
+
+**Discharge Medications:**
+1. Levetiracetam 500 mg PO BID
+2. Gabapentin 600 mg PO TID
+3. Acetaminophen 1000 mg PO Q6H (PRN pain)
+4. Aspirin 81 mg PO DAILY
+
+**Discharge Diagnosis:**
+Primary diagnosis:  Cerebral Infarction, unspecified type 
+Secondary diagnoses:  Hypertension, Hyperlipidemia
+
+**Discharge Condition:**
+Mental Status: Clear and coherent.
+Level of Consciousness: Alert and interactive.
+Activity Status: Ambulatory - Independent.
+
+**Discharge Instructions:**
+
+Dear Mr. Smith,
+
+You were admitted to the hospital after experiencing a stroke. The neurologists have diagnosed you with cerebral infarction, which means that there is reduced blood flow to part of your brain. We have started treatment with Levetiracetam and Gabapentin to help control seizures and manage pain.
+
+Please follow up with your primary care doctor as an outpatient and continue all of your home medications unless specifically instructed to stop by your doctor.
+
+Please call your doctor or return to the emergency department if you experience any of the following:
+- New onset of weakness, numbness, tingling, seizures, difficulty with speech or movement.
+- Any other worrisome symptoms that you feel your doctor should know about.
+
+Thank you for allowing us to participate in your care,
+Your Edwards Neurology Team
+
+**Followup Instructions:**
+Schedule a follow-up appointment with Dr. Emily Chen in 1 week to monitor progress and adjust treatment plan as needed, or sooner if symptoms worsen or new concerns arise.",0.276069617394757,0.7,0.4880348086973785,Structure: Document format issues; Missing required keywords | Clinical: Failed to extract age
+26,"**Name:** Emily Wilson  
+**Unit No:** 5321478  
+
+**Admission Date:** 2024-07-15               **Discharge Date:**   2024-07-22  
+
+**Date of Birth:** 2006-03-11             **Sex:**   F  
+
+**Service:** ORTHOPEDICS  
+
+**Allergies:**  
+No Known Allergies / Adverse Drug Reactions  
+
+**Attending:** Dr. Sophia Rodriguez
+
+**Discharge Medications:**
+1. Acetaminophen 325 mg PO Q6H 
+2. Ibuprofen 400 mg PO TID 
+
+**Discharge Disposition:**  
+Home  
+
+**Discharge Diagnosis:**  
+Primary diagnosis:  Femur Fracture (S82.310A)  
+Secondary diagnoses:  None
+
+**Discharge Condition:**  
+Mental Status: Clear and coherent.
+Level of Consciousness: Alert and interactive.
+Activity Status: Ambulatory - Independent.
+
+**Discharge Instructions:**  
+Dear Ms. Wilson,
+
+You were admitted to the hospital after a fall, which resulted in a fracture of your femur (thigh bone). You underwent surgery to stabilize the fracture using an intramedullary nail, which was successful.
+
+Please follow up with your primary care doctor as an outpatient and continue all of your home medications unless specifically instructed to stop by your doctor.  
+
+Please call your doctor or return to the emergency department if you experience any of the following:
+- Severe pain in your leg or groin area.
+- Redness, swelling, increased warmth, or pus around the surgical site.
+- Difficulty moving your leg or experiencing numbness/tingling sensations.
+
+Thank you for allowing us to participate in your care,
+Your Orthopedic Surgery Team
+
+**Followup Instructions:**  
+Schedule a follow-up appointment with Dr. Sophia Rodriguez in 2 weeks to monitor progress and adjust treatment plan as needed, or sooner if symptoms worsen or new concerns arise.",0.287630276835841,0.6,0.44381513841792053,Structure: Document format issues; Missing required keywords | Clinical: Failed to extract age
+27,"**Patient Demographics**
+Name: John Doe
+Unit No.: 1234567
+Admission Date: 2024-06-15
+Discharge Date: 2024-07-04
+Date of Birth: 1956-10-25
+Sex: M
+Service: UROLOGY
+
+**Admission Diagnosis**: Benign Prostatic Hyperplasia (BPH)
+
+**Discharge Diagnosis**: Chronic Benign Prostatic Hyperplasia with Lower Urinary Tract Symptoms
+
+**Hospital Course**: The patient was admitted for evaluation and management of benign prostatic hyperplasia. He underwent a comprehensive urological assessment, including urinalysis, prostate-specific antigen (PSA) test, and ultrasound examination. The patient's symptoms improved significantly after receiving medical therapy.
+
+**Discharge Medications**
+1. Tamsulosin 0.4 mg PO QD
+2. Alfuzosin 10 mg PO QD
+
+**Discharge Instructions**
+
+Dear Mr. Doe,
+
+You were admitted to the hospital for evaluation and management of your benign prostatic hyperplasia (BPH). Your symptoms have improved significantly after receiving medical therapy.
+
+Please follow up with your urologist as an outpatient and continue all of your home medications unless specifically instructed to stop by your doctor.
+
+To manage your BPH, please take your medications exactly as directed:
+
+* Tamsulosin 0.4 mg once daily
+* Alfuzosin 10 mg once daily
+
+Please call your doctor or return to the emergency department if you experience any of the following:
+- Increased frequency or urgency of urination
+- Difficulty starting or stopping urine flow
+- Weak or interrupted urine stream
+- Painful urination
+
+Thank you for allowing us to participate in your care,
+Your Urology Team
+
+**Followup Instructions**: Schedule a follow-up appointment with Dr. Jane Smith in 2 weeks to monitor progress and adjust treatment plan as needed, or sooner if symptoms worsen or new concerns arise.",0.3933744843917426,0.55,0.4716872421958713,Structure: Document format issues; Missing required keywords
+28,"**Name:** John Doe  
+**Unit No:** 1234567  
+
+**Admission Date:** 2024-06-10              **Discharge Date:**   2024-07-05  
+
+**Date of Birth:** 1985-07-01             **Sex:**   M  
+
+**Service:** ORTHOPEDICS 
+
+**Allergies:** 
+No Known Allergies / Adverse Drug Reactions
+
+**Attending:** Dr. Emily Chen
+
+
+**Discharge Medications:**
+1. Acetaminophen 1000 mg PO Q6H
+2. Ibuprofen 400 mg PO TID for pain management post-operatively  
+3. Cephalexin 500 mg PO BID for wound prophylaxis after hip surgery 
+4. Omeprazole 20 mg PO DAILY to reduce stomach acid
+
+ 
+**Discharge Disposition:**
+Home
+
+
+**Discharge Diagnosis:**
+Primary diagnosis: M13.2 - Hip Fracture, transversely oriented
+Secondary diagnoses: Osteoporosis, Age-Related
+
+ 
+**Discharge Condition:**
+Mental Status: Clear and coherent.
+Level of Consciousness: Alert and interactive.
+Activity Status: Ambulatory - Independent.
+
+
+**Discharge Instructions:**
+
+Dear Mr. Doe,
+
+You were admitted to the hospital after a fall that resulted in a hip fracture. The orthopedic surgeons performed surgery to repair your hip, and you are now on the road to recovery.
+
+Please follow up with your primary care doctor as an outpatient and continue all of your home medications unless specifically instructed to stop by your doctor.
+
+Please call your doctor or return to the emergency department if you experience any of the following:
+- New onset of pain in your hip or leg.
+- Any other worrisome symptoms that you feel your doctor should know about.
+
+Thank you for allowing us to participate in your care,
+Your Orthopedic Team
+
+**Followup Instructions:**
+Schedule a follow-up appointment with Dr. Emily Chen in 2 weeks to monitor progress and adjust treatment plan as needed, or sooner if symptoms worsen or new concerns arise.",0.287630276835841,0.4,0.34381513841792055,Structure: Document format issues; Missing required keywords | Clinical: Failed to extract age
+29,"**Patient Demographics**
+
+Name: John Doe  
+Unit No:   1234567
+Admission Date: 2024-06-20               Discharge Date:   2024-07-15
+Date of Birth: 1954-08-08                Sex:   M
+
+**Service**: UROLOGY
+
+
+**Admission Diagnosis**
+Benign Prostatic Hyperplasia (BPH) with Urinary Retention
+
+
+**Discharge Diagnosis**
+
+Primary diagnosis: Benign Prostatic Hyperplasia (BPH)
+Secondary diagnoses:  Hypertension, Age-Related Cognitive Decline
+
+
+**Hospital Course**
+
+The patient was admitted to the hospital for management of urinary retention secondary to BPH. He underwent a transrectal ultrasound-guided prostate biopsy and received education on proper voiding techniques.
+
+**Discharge Medications**
+1. Tamsulosin 0.4 mg PO QD 
+2. Albuterol Inhaler (Salmetrol) 50 mcg INH as needed for urinary retention exacerbation symptoms
+3. Fluticasone Propionate NASAL 1 SPRY NU BID:PRN congestion
+
+**Discharge Instructions**
+
+Dear Mr. Doe,
+
+You were admitted to the hospital for management of your urinary retention caused by an enlarged prostate.
+The urologists felt that you needed a prostate biopsy and education on proper voiding techniques.
+
+Please follow up with your primary care doctor as an outpatient and continue all of your home medications unless specifically instructed 
+to stop by your doctor. 
+
+Please call your doctor or return to the emergency department if you experience any of the following:
+- Inability to urinate
+- Severe pain in your abdomen or back
+- Fever over 101.5°F (38.6°C)
+- Blood in your urine
+
+Thank you for allowing us to participate in your care,
+Your Urology Team
+
+
+**Followup Instructions**
+Schedule a follow-up appointment with Dr. Sarah Lee in 2 weeks to monitor progress and adjust treatment plan as needed, or sooner if symptoms worsen or new concerns arise.",0.40038469338515226,0.35,0.3751923466925761,Structure: Document format issues; Missing required keywords
+30,"**Name:** Emily Wilson  
+**Unit No.:** 5421111  
+**Admission Date:** 2024-08-10  
+**Discharge Date:** 2024-08-15  
+
+**Date of Birth:** 1981-05-26 
+**Sex:** Female  
+**Service:** OBSTETRICS  
+
+**Allergies:**
+No Known Allergies / Adverse Drug Reactions
+
+**Attending:** Dr. Rachel Kim
+
+
+**Discharge Medications:**
+
+*   Metformin 500 mg PO BID
+*   Omeprazole 20 mg PO DAILY
+*   Acetaminophen 650 mg PO Q6H PRN for pain or fever
+*   Loperamide 2 mg PO PRN as needed for diarrhea
+*   Ferrous Sulfate 300 mg PO DAILY
+
+
+**Discharge Diagnosis:**
+Primary diagnosis: Gestational Diabetes Mellitus (O10)
+Secondary diagnoses: Hypertension (I10), Anemia (D50)
+
+**Discharge Condition:**
+Mental Status: Clear and coherent.
+Level of Consciousness: Alert and interactive.
+Activity Status: Ambulatory - Independent.
+
+**Discharge Instructions:**
+
+Dear Ms. Wilson,
+
+You were admitted to the hospital for gestational diabetes mellitus management. Your blood sugar levels have been under control during your stay, and you have been educated on how to manage it at home. Please follow up with your obstetrician as an outpatient and continue all of your home medications unless specifically instructed to stop by your doctor.
+
+Please call your doctor or return to the emergency department if you experience any of the following:
+- New onset of vaginal bleeding, sudden severe headache, or difficulty breathing.
+- Any other worrisome symptoms that you feel your doctor should know about.
+
+Thank you for allowing us to participate in your care,
+Your Obstetrics Team
+
+**Followup Instructions:**
+Schedule a follow-up appointment with Dr. Rachel Kim in 2 weeks to monitor progress and adjust treatment plan as needed, or sooner if symptoms worsen or new concerns arise.",0.276069617394757,0.8,0.5380348086973785,Structure: Document format issues; Missing required keywords | Clinical: Failed to extract age
+31,"**Patient Demographics**
+
+Name: Emily Wilson  
+Unit No.: 5311231  
+Admission Date: 2024-07-20  
+Discharge Date: 2024-08-01  
+Date of Birth: 2004-08-05  
+Sex: F  
+Service: OBSTETRICS  
+
+**Allergies**
+
+No Known Allergies / Adverse Drug Reactions
+
+**Attending**
+
+Dr. Sophia Lee
+
+**Admission Diagnosis**
+
+Vaginal Discharge and Dysuria (Symptomatic Bacterial Vaginosis)
+
+**Discharge Diagnosis**
+Primary diagnosis:  Symptomatic Bacterial Vaginosis
+Secondary diagnoses:  None
+
+**Hospital Course**
+
+The patient was admitted to the hospital with symptoms of vaginal discharge and dysuria. A pelvic exam revealed a normal cervix, but a wet mount showed the presence of clue cells. A bacterial vaginosis (BV) diagnosis was made based on these findings. The patient was started on metronidazole 500 mg PO BID x 7 days.
+
+**Discharge Medications**
+
+1. Metronidazole 500 mg PO BID  
+2. Ibuprofen 400 mg PO Q6H:PRN pain  
+3. Hydralazine 25 mg PO QID:PRN hypertension (for patient's known HTN)
+
+**Discharge Instructions**
+
+Dear Ms. Wilson,
+
+You were admitted to the hospital for evaluation of your vaginal discharge and dysuria symptoms.
+The diagnosis of symptomatic bacterial vaginosis was made based on a pelvic exam and wet mount results.
+To treat this, you will be taking metronidazole 500 mg by mouth twice a day for 7 days.
+
+Please follow up with your primary care doctor as an outpatient and continue all of your home medications unless specifically instructed to stop by your doctor. 
+
+Please call your doctor or return to the emergency department if you experience any of the following:
+- Increased vaginal discharge
+- Fever above 101°F (38°C)
+- Severe pelvic pain
+
+Thank you for allowing us to participate in your care,
+Your Obstetrics Team.
+
+**Followup Instructions**
+
+Schedule a follow-up appointment with Dr. Sophia Lee in 1 week to monitor progress and adjust treatment plan as needed, or sooner if symptoms worsen or new concerns arise.",0.39689664249785006,0.35,0.373448321248925,Structure: Document format issues; Missing required keywords | Clinical: Sex-diagnosis mismatch (sex_score: 0.40)
+32,"**Name:** John Doe                  **Unit No:** 5314446
+ 
+**Admission Date:** 2024-07-10              **Discharge Date:**   2024-07-15
+ 
+**Date of Birth:** 1990-01-06             **Sex:**   M
+ 
+**Service:** ORTHOPEDICS
+ 
+**Allergies:**
+No Known Allergies / Adverse Drug Reactions
+
+**Attending:** Dr. Emily Chen
+
+**Discharge Medications:**
+1. Acetaminophen 1000 mg PO Q4H 
+2. Ibuprofen 400 mg PO TID 
+3. Oxycodone 5 mg PO Q4H:PRN pain 
+
+**Discharge Disposition:**
+Home with Home Health Services
+
+**Discharge Diagnosis:**
+Primary diagnosis:  Posterior Hip Dislocation
+Secondary diagnoses:  Hypertension, Hyperlipidemia
+
+**Discharge Condition:**
+Mental Status: Clear and coherent.
+Level of Consciousness: Alert and interactive.
+Activity Status: Ambulatory - Independent.
+
+**Discharge Instructions:**
+
+Dear Mr. Doe,
+
+You were admitted to the hospital after a motorcycle accident caused you to dislocate your left hip joint.
+The orthopedic surgeons performed an emergency reduction and immobilization with a hip spica cast.
+You will be followed by your primary care doctor as an outpatient and 
+continue all of your home medications unless specifically instructed 
+to stop by your doctor. 
+
+Please follow the instructions below carefully.
+
+1.  Take your pain medication exactly as directed.
+2.  Follow a regular schedule for taking your other medications, including blood pressure and cholesterol control.
+3.  Avoid heavy lifting or bending until your follow-up appointment with Dr. Chen in 1 week to monitor progress and adjust treatment plan as needed.
+4.  Return to the emergency department if you experience any of the following:
+    - New onset of pain or swelling at the hip joint
+    - Difficulty walking or bearing weight on your left leg
+    - Any other worrisome symptoms that you feel your doctor should know about
+
+Thank you for allowing us to participate in your care,
+Your Orthopedic Team
+ 
+**Followup Instructions:**
+Schedule a follow-up appointment with Dr. Emily Chen in 1 week to monitor progress and adjust treatment plan as needed, or sooner if symptoms worsen or new concerns arise.",0.287630276835841,0.15,0.2188151384179205,Structure: Document format issues; Missing required keywords | Clinical: Failed to extract age
+33,"**Name:** John Doe
+
+**Unit No:** 1234567
+
+**Admission Date:** 2024-07-10
+
+**Discharge Date:** 2024-07-15
+
+**Date of Birth:** 1950-06-26
+
+**Sex:** M
+
+**Service:** GENERAL_MEDICINE
+
+**Allergies:**
+
+* No Known Allergies / Adverse Drug Reactions
+
+**Attending:** Dr. Jane Smith
+
+**Discharge Medications:**
+1. Aspirin 81 mg PO DAILY
+2. Lisinopril 20 mg PO DAILY
+3. Atorvastatin 40 mg PO DAILY
+4. Metoclopramide 5 mg PO TID for GERD symptoms
+
+**Discharge Disposition:** Home with caregiver support
+
+**Discharge Diagnosis:**
+
+* Primary diagnosis: Chronic Obstructive Pulmonary Disease (COPD) exacerbation, mild to moderate
+* Secondary diagnoses: Hypertension, Hyperlipidemia
+
+**Discharge Condition:**
+Mental Status: Clear and coherent.
+Level of Consciousness: Alert and interactive.
+Activity Status: Ambulatory with assistance.
+
+**Discharge Instructions:**
+
+Dear Mr. Doe,
+
+You were admitted to the hospital for management of your chronic obstructive pulmonary disease (COPD) exacerbation. Your symptoms have improved significantly during your stay, and you will be able to continue your care at home.
+
+Please follow up with your primary care doctor as an outpatient and continue all of your home medications unless specifically instructed to stop by your doctor.
+
+To prevent further COPD exacerbations:
+
+* Use your inhalers as directed
+* Avoid smoking or exposure to smoke
+* Get vaccinated against flu and pneumonia each year
+* Exercise regularly, but avoid overexertion
+
+Please call your doctor or return to the emergency department if you experience any of the following:
+- New onset of shortness of breath, chest pain, or coughing up blood
+- Any other worrisome symptoms that you feel your doctor should know about.
+
+Thank you for allowing us to participate in your care,
+Your General Medicine Team
+
+**Followup Instructions:**
+Schedule a follow-up appointment with Dr. Jane Smith in 2 weeks to monitor progress and adjust treatment plan as needed, or sooner if symptoms worsen or new concerns arise.",0.287630276835841,0.65,0.46881513841792055,Structure: Document format issues; Missing required keywords | Clinical: Failed to extract age
+34,"**Name:** Emily Wilson  
+**Unit No:** 5314451  
+
+**Admission Date:** 2024-06-15            **Discharge Date:**   2024-07-04 
+
+**Date of Birth:** 1996-08-10             **Sex:**   F   
+
+**Service:** GENERAL_MEDICINE
+
+**Allergies:**
+No Known Allergies / Adverse Drug Reactions
+
+**Attending:** Dr. Maria Rodriguez
+
+**Discharge Medications:**
+
+1. Amoxicillin 500 mg PO TID for 7 days
+2. Acetaminophen 325 mg PO Q6H PRN pain
+3. Omeprazole 20 mg PO DAILY for gastroesophageal reflux disease (GERD)
+
+**Discharge Instructions:**
+Dear Emily,
+
+You were admitted to the hospital with a diagnosis of community-acquired pneumonia, confirmed by chest X-ray and laboratory results.
+
+Please follow up with your primary care doctor as an outpatient and continue all of your home medications unless specifically instructed to stop by your doctor. 
+
+Please call your doctor or return to the emergency department if you experience any of the following:
+- Increased difficulty breathing
+- Fever above 102°F (39°C)
+- Coughing up blood or yellow or green mucus
+- Chest pain or tightness
+
+Thank you for allowing us to participate in your care,
+Your General Medicine Team
+
+**Followup Instructions:**
+Schedule a follow-up appointment with Dr. Maria Rodriguez in 1 week to monitor progress and adjust treatment plan as needed, or sooner if symptoms worsen or new concerns arise.",0.24748880009389734,0.85,0.5487444000469487,Structure: Document format issues; Missing required keywords | Clinical: Failed to extract age
+35,"**Name:** John Smith  
+**Unit No:**   5311234
+
+**Admission Date:** 2023-05-15              **Discharge Date:**   2023-06-02
+
+**Date of Birth:** 1956-03-06             **Sex:**   M
+
+**Service:** NEUROLOGY
+
+**Allergies:** 
+No Known Allergies / Adverse Drug Reactions
+
+**Attending:** Dr. Rachel Kim
+
+**Discharge Medications:**
+
+1. Amlodipine 10 mg PO DAILY
+2. Atorvastatin 20 mg PO DAILY
+3. Aspirin 81 mg PO DAILY
+4. Gabapentin 600 mg PO TID for pain management and seizure prophylaxis
+5. Levothyroxine 100 mcg PO DAILY for hypothyroidism
+
+**Discharge Disposition:**
+Home with Home Health Services arranged for wound care and physical therapy.
+
+**Discharge Diagnosis:**
+Primary diagnosis:  Chronic Ischemic Cerebrovascular Disease (I63.6)
+Secondary diagnoses:  Hypertension, Hyperlipidemia, Hypothyroidism
+
+**Discharge Condition:**
+Mental Status: Clear and coherent.
+Level of Consciousness: Alert and interactive.
+Activity Status: Ambulatory - Independent.
+
+**Discharge Instructions:**
+
+Dear Mr. Smith,
+
+You were admitted to the hospital for a transient ischemic attack (TIA) and underwent further evaluation, including an MRI and carotid ultrasound. The neurologists felt that your symptoms are consistent with chronic ischemic cerebrovascular disease, and you will require long-term management of your hypertension and hyperlipidemia.
+
+Please follow up with your primary care doctor as an outpatient and continue all of your home medications unless specifically instructed to stop by your doctor. Also, attend the scheduled physical therapy sessions for wound care and rehabilitation.
+
+Please call your doctor or return to the emergency department if you experience any of the following:
+- New onset of weakness, numbness, tingling, seizures, difficulty with speech or movement.
+- Any other worrisome symptoms that you feel your doctor should know about.
+
+Thank you for allowing us to participate in your care,
+Your Edwards Neurology Team
+
+**Followup Instructions:**
+Schedule a follow-up appointment with Dr. Rachel Kim in 2 weeks to monitor progress and adjust treatment plan as needed, or sooner if symptoms worsen or new concerns arise.",0.287630276835841,0.55,0.4188151384179205,Structure: Document format issues; Missing required keywords | Clinical: Failed to extract age
+36,"**Name:** John Doe  
+**Unit No.:** 1234567  
+**Admission Date:** 2024-06-15  
+**Discharge Date:** 2024-07-04  
+
+**Date of Birth:** 1985-02-18  
+**Sex:** Male  
+**Service:** NEUROLOGY  
+
+**Allergies:**
+No Known Allergies / Adverse Drug Reactions
+
+**Attending:** Dr. Sarah Lee  
+
+**Discharge Medications:**
+
+1. Levetiracetam 500 mg PO BID 
+2. Gabapentin 600 mg PO TID 
+3. Omeprazole 20 mg PO DAILY 
+
+**Discharge Disposition:**  
+Home  
+
+**Discharge Diagnosis:**  
+Primary diagnosis:  Migraine with aura 
+Secondary diagnoses:  Hypertension
+
+**Discharge Condition:**  
+Mental Status: Clear and coherent.
+Level of Consciousness: Alert and interactive.
+Activity Status: Ambulatory - Independent.
+
+**Discharge Instructions:**
+
+Dear Mr. Doe,
+
+You were admitted to the hospital for treatment of a severe migraine with aura, which was characterized by visual disturbances and nausea.
+Our neurologists worked closely with you to optimize your medication regimen and provide guidance on managing future episodes.
+
+Please follow up with your primary care doctor as an outpatient and continue all of your home medications unless specifically instructed 
+to stop by your doctor. 
+
+Please call your doctor or return to the emergency department if you experience any of the following:
+- New onset of severe headache, nausea, vomiting, visual disturbances
+- Any other worrisome symptoms that you feel your doctor should know about.
+
+Thank you for allowing us to participate in your care,
+Your Edwards Neurology Team
+
+**Followup Instructions:**
+Schedule a follow-up appointment with Dr. Sarah Lee in 2 weeks to monitor progress and adjust treatment plan as needed, or sooner if symptoms worsen or new concerns arise.",0.287630276835841,0.65,0.46881513841792055,Structure: Document format issues; Missing required keywords | Clinical: Failed to extract age
+37,"**Patient Demographics**
+
+Name: Emily Wilson  
+Unit No:   5314446  
+
+Admission Date: 2024-06-10              Discharge Date:   2024-07-01  
+
+Date of Birth: 1940-02-25             Sex:   F  
+
+Service: ORTHOPEDICS
+
+Allergies:
+No Known Allergies / Adverse Drug Reactions
+
+
+**Admission Diagnosis**
+Femur Fracture (closed) with significant pain and swelling in the affected limb.
+
+**Discharge Diagnosis**
+
+Primary diagnosis:  Closed Femur Fracture (M84.513)
+Secondary diagnoses:  Osteoporosis, Hypertension
+
+**Hospital Course**
+Patient was admitted to the orthopedics unit with a closed femur fracture sustained from a fall at home. Initial treatment consisted of pain management and stabilization of the affected limb using a provisional splint. Following radiographic confirmation, patient underwent surgical fixation of the fracture under general anesthesia. Post-operative recovery was complicated by short-lived episodes of delirium but resolved uneventfully.
+
+**Discharge Medications**
+
+1. Acetaminophen 500 mg PO Q4H 
+2. Gabapentin 100 mg PO TID:PRN for pain
+3. Alendronate Sodium 70 mg PO Wkly for osteoporosis prevention
+4. Lisinopril 20 mg PO DAILY for hypertension management
+
+**Discharge Instructions**
+
+Dear Ms. Wilson,
+
+You were admitted to the hospital after a fall at home resulted in a break of your femur (thigh bone). The orthopedic surgeons fixed the fracture surgically and you have now recovered enough to go home.
+
+Please follow up with your primary care doctor as an outpatient and continue all of your home medications unless specifically instructed to stop by your doctor. 
+
+Please call your doctor or return to the emergency department if you experience any of the following:
+- New onset of severe pain, numbness, tingling in the affected limb.
+- Any other worrisome symptoms that you feel your doctor should know about.
+
+Thank you for allowing us to participate in your care,
+Your Edwards Orthopedics Team
+
+**Followup Instructions**
+Schedule a follow-up appointment with Dr. Rachel Kim in 2 weeks to monitor progress and adjust treatment plan as needed, or sooner if symptoms worsen or new concerns arise.",0.4304720943960284,0.65,0.5402360471980142,Structure: Document format issues; Missing required keywords
+38,"**Name:** Emily Wilson                  **Unit No:**   5314554
+ 
+**Admission Date:** 2024-06-10             **Discharge Date:**   2024-07-01
+ 
+**Date of Birth:** 2011-02-27            **Sex:**   F
+ 
+**Service:** PEDIATRICS
+ 
+**Allergies:**
+No Known Allergies / Adverse Drug Reactions
+
+**Attending:** Dr. Rachel Kim
+
+
+**Discharge Medications:**
+
+* Amoxicillin 500 mg PO TID for 10 days
+* Acetaminophen 325 mg PO Q4H as needed for pain
+* Omeprazole 20 mg PO DAILY for gastrointestinal protection
+
+ 
+**Hospital Course:** Emily was admitted to the pediatric ward with a diagnosis of community-acquired pneumonia. She was treated with antibiotics and supportive care. Her fever resolved, and she was able to tolerate oral medications.
+
+ 
+**Discharge Diagnosis:**
+
+* Primary diagnosis: Community-Acquired Pneumonia (J18.9)
+* Secondary diagnoses: Viral Upper Respiratory Tract Infection
+
+
+**Discharge Condition:** Emily is now clinically stable and ready for discharge.
+
+
+**Discharge Instructions:**
+
+Dear Emily,
+
+You were admitted to the hospital with pneumonia.
+The pediatric team felt that you responded well to treatment, but
+you will be followed by your primary care doctor as an outpatient.
+
+Please follow up with your primary care doctor in 1 week to monitor progress and adjust treatment plan as needed. Please continue all of your medications unless specifically instructed to stop by your doctor.
+
+Please call your doctor or return to the emergency department if you experience any of the following:
+- New onset of fever, cough, shortness of breath
+- Any other worrisome symptoms that you feel your doctor should know about.
+
+
+Thank you for allowing us to participate in your care,
+Your Pediatric Team
+
+**Followup Instructions:** Schedule a follow-up appointment with Dr. Rachel Kim in 1 week to monitor progress and adjust treatment plan as needed, or sooner if symptoms worsen or new concerns arise.",0.276069617394757,0.7,0.4880348086973785,Structure: Document format issues; Missing required keywords | Clinical: Failed to extract age
+39,"**Patient Demographics**
+
+* Name: Emily Wilson
+* Unit No.: 1234567
+* Admission Date: 2024-06-20
+* Discharge Date: 2024-06-25
+* Date of Birth: 1993-08-12
+* Sex: Female
+* Service: GENERAL_MEDICINE
+
+**Admission Diagnosis**
+
+Acute Urinary Tract Infection (UTI)
+
+**Discharge Diagnosis**
+M50.9 - Nonspecific urinary tract infection, unspecified 
+
+**Hospital Course**
+
+Patient was admitted with symptoms of dysuria, frequency, and urgency. Laboratory results confirmed a UTI with E. coli as the causative organism. The patient received intravenous antibiotics for 48 hours before being switched to oral antibiotics due to clinical improvement.
+
+**Discharge Medications**
+1. Ciprofloxacin 500 mg PO BID 
+2. Sulfamethoxazole 800 mg/Trimethoprim 160 mg PO QD
+3. Hydrorozine 25 mg PO TID
+
+**Discharge Instructions**
+
+Dear Emily,
+
+You were admitted to the hospital with a urinary tract infection.
+The medical team has treated you with antibiotics, and we have seen improvement in your symptoms.
+
+To continue recovery at home:
+- Take all medications exactly as directed
+- Drink plenty of fluids to help flush out bacteria
+- Avoid sexual intercourse until your doctor gives you clearance
+
+If you experience any worsening symptoms or concerns, please contact your primary care physician or return to the emergency department for further evaluation.
+
+
+**Followup Instructions**
+
+Schedule a follow-up appointment with Dr. John Smith in 7 days to monitor progress and adjust treatment plan as needed, or sooner if symptoms worsen or new concerns arise.",0.4304720943960284,0.4,0.4152360471980142,Structure: Document format issues; Missing required keywords
+40,"### PATIENT INFORMATION:
+
+Name: John Doe
+Unit No: 1234567
+Admission Date: 2024-06-10
+Discharge Date: 2024-07-02
+Date of Birth: 1970-04-08
+Sex: Male
+
+### ADMISSION DIAGNOSIS:
+
+Acute Ischemic Stroke with Right Hemiparesis
+
+### DISCHARGE DIAGNOSES (ICD-10 CODES):
+
+Primary diagnosis: I63.9 - Acute ischemic stroke, unspecified
+Secondary diagnoses: I10 - Hypertension, I60 - Transient cerebrovascular disorder
+
+### HOSPITAL COURSE:
+
+Mr. Doe was admitted to the hospital after experiencing sudden onset of right-sided weakness and difficulty speaking. He underwent a CT scan which confirmed an acute ischemic stroke in the left middle cerebral artery territory. The patient received intravenous tissue plasminogen activator (tPA) within 4 hours of symptom onset, followed by anticoagulation with heparin to prevent recurrent events.
+
+### DISCHARGE MEDICATIONS:
+
+1. Aspirin 325 mg PO DAILY
+2. Apixaban 5 mg PO BID
+3. Lisinopril 10 mg PO DAILY
+4. Atorvastatin 20 mg PO DAILY
+5. Metoclopramide 5 mg PO TID:PRN nausea
+
+### DISCHARGE INSTRUCTIONS:
+
+Dear Mr. Doe,
+
+You were admitted to the hospital after experiencing a stroke, which is a serious condition that requires close follow-up and management.
+
+Please continue all of your medications as instructed above for the next 2 weeks. After this period, you will need to schedule an appointment with your primary care doctor to review your medication regimen.
+
+In addition to taking your medications, please make sure to:
+- Follow a balanced diet rich in fruits, vegetables, and whole grains.
+- Engage in regular physical activity, such as walking or light exercise, for at least 30 minutes per day.
+- Monitor your blood pressure regularly and report any changes to your doctor.
+
+Please call your doctor or return to the emergency department if you experience:
+- Worsening of symptoms, such as increased weakness or difficulty speaking
+- New onset of numbness or tingling in your hands or feet
+- Dizziness or lightheadedness
+
+Thank you for allowing us to participate in your care,
+Your Edwards Neurology Team
+
+### FOLLOWUP INSTRUCTIONS:
+
+Schedule a follow-up appointment with Dr. [Physician's Name] in 2 weeks to review progress and adjust treatment plan as needed, or sooner if symptoms worsen or new concerns arise.",0.5821301806514549,0.15,0.3660650903257275,Structure: Document format issues; Missing required keywords
+41,"**Patient Demographics**
+Name: Emily Chen                  Unit No:   5314456
+ 
+Admission Date:  2024-06-15              Discharge Date:   2024-07-04
+ 
+Date of Birth:  1979-02-11             Sex:   F
+ 
+Service: GENERAL_MEDICINE
+ 
+Allergies: 
+No Known Allergies / Adverse Drug Reactions
+ 
+Attending: Dr. Maria Rodriguez
+
+**Discharge Medications**
+1. Lisinopril 20 mg PO DAILY
+2. Atenolol 50 mg PO BID
+3. Metformin 500 mg PO BID
+4. Simvastatin 40 mg PO DAILY
+5. Albuterol Inhaler (as needed)
+6. Fluticasone Propionate NASAL 1 SPRY NU BID:PRN congestion
+
+**Hospital Course**
+The patient was admitted to the hospital with symptoms of chest pain and shortness of breath. The initial diagnosis was acute coronary syndrome, but further evaluation revealed a pulmonary embolism as the primary cause of her symptoms. She received thrombolytic therapy for 24 hours and made significant improvement in her symptoms.
+
+**Discharge Diagnosis**
+Primary diagnosis: Pulmonary Embolism (I26.0)
+Secondary diagnoses: Hypertension (I10.9), Hyperlipidemia (E78.5)
+
+**Discharge Condition**
+Mental Status: Clear and coherent.
+Level of Consciousness: Alert and interactive.
+Activity Status: Ambulatory - Independent.
+
+**Discharge Instructions**
+Dear Ms. Chen,
+
+You were admitted to the hospital after experiencing chest pain and shortness of breath. Our team has worked hard to treat your condition, and you have made significant improvement in your symptoms.
+
+Please follow up with your primary care doctor as an outpatient and continue all of your home medications unless specifically instructed to stop by your doctor.
+
+Please call your doctor or return to the emergency department if you experience any of the following:
+- New onset of chest pain, shortness of breath, dizziness, lightheadedness.
+- Any other worrisome symptoms that you feel your doctor should know about.
+
+Thank you for allowing us to participate in your care,
+Your General Medicine Team
+
+**Followup Instructions**
+Schedule a follow-up appointment with Dr. Maria Rodriguez in 1 week to monitor progress and adjust treatment plan as needed, or sooner if symptoms worsen or new concerns arise.",0.6385539160402834,0.15,0.39427695802014173,Structure: Document format issues; Missing required keywords
+42,"**Name:** Emily Wilson  
+**Unit No:** 5314456  
+
+**Admission Date:** 2024-07-15              **Discharge Date:**   2024-07-22  
+
+**Date of Birth:** 1991-10-14             **Sex:**   F  
+
+**Service:** OBSTETRICS  
+
+**Allergies:** 
+No Known Allergies / Adverse Drug Reactions  
+
+**Attending:** Dr. Rachel Kim  
+
+**Discharge Medications:**
+1. **Oxycodone 5 mg PO Q4H**:PRN pain  
+2. **Metoclopramide 10 mg PO TID**:PRN nausea and vomiting 
+3. **Doxycycline 100 mg PO BID**: for postpartum endometritis prevention 
+4. **Ferrous Sulfate 300 mg PO DAILY**: for postpartum anemia prevention 
+
+**Discharge Disposition:** Home with support person  
+
+**Discharge Diagnosis:**
+Primary diagnosis:   Postpartum Endometritis  
+Secondary diagnoses:  Vaginal delivery, Postpartum Hemorrhage
+
+**Discharge Condition:**
+Mental Status: Clear and cooperative.
+Level of Consciousness: Alert and interactive.
+Activity Status: Ambulatory - Independent.
+
+**Discharge Instructions:**
+
+Dear Ms. Wilson,
+
+You were admitted to the hospital after a diagnosis of postpartum endometritis was confirmed by culture results from your vaginal discharge.
+Your obstetricians felt that you required antibiotics for effective treatment, which included doxycycline and metoclopramide for nausea control.
+
+Please follow up with your primary care doctor as an outpatient in 1 week to monitor progress and adjust treatment plan as needed. Additionally, please schedule a follow-up appointment with Dr. Rachel Kim in 2 weeks to assess the effectiveness of the antibiotic therapy and any concerns regarding postpartum recovery.
+
+Please call your doctor or return to the emergency department if you experience any of the following:
+- Fever above 101°F (38.3°C)
+- Increased pain or tenderness
+- Vaginal discharge with an unusual odor or consistency
+
+Thank you for allowing us to participate in your care,
+Your Obstetrics Team  
+
+**Followup Instructions:**
+Schedule a follow-up appointment with Dr. Rachel Kim in 2 weeks to assess the effectiveness of the antibiotic therapy and any concerns regarding postpartum recovery. Monitor for signs of infection, such as fever, increased pain or tenderness, or unusual vaginal discharge.",0.287630276835841,0.4,0.34381513841792055,Structure: Document format issues; Missing required keywords | Clinical: Failed to extract age
+43,"**Name:** John Doe
+**Unit No.:** 1234567
+**Admission Date:** 2024-06-14
+**Discharge Date:** 2024-07-03
+**Date of Birth:** 1959-08-05
+**Sex:** Male
+**Service:** UROLOGY
+
+**Allergies:**
+No Known Allergies / Adverse Drug Reactions
+
+**Attending:** Dr. Emily Chen
+
+**Discharge Medications:**
+
+1. Tamsulosin 0.4 mg PO DAILY for Benign Prostatic Hyperplasia (BPH)
+2. Ciprofloxacin 500 mg PO BID for Urinary Tract Infection (UTI) prophylaxis
+3. Metformin 850 mg PO DAILY for Diabetes Mellitus Type 2 management
+
+**Discharge Instructions:**
+
+Dear Mr. Doe,
+
+You were admitted to the hospital with a diagnosis of Benign Prostatic Hyperplasia (BPH) and Urinary Tract Infection (UTI).
+
+Please follow up with your primary care doctor as an outpatient and continue all of your home medications unless specifically instructed to stop by your doctor.
+
+To manage your BPH, please take Tamsulosin 0.4 mg once daily in the morning.
+
+For UTI prophylaxis, take Ciprofloxacin 500 mg twice a day for the next 7 days.
+
+Monitor your urine output and report any decrease or pain while urinating to your doctor promptly.
+
+Thank you for allowing us to participate in your care,
+Your Urology Team
+
+**Followup Instructions:**
+Schedule a follow-up appointment with Dr. Emily Chen in 2 weeks to monitor progress and adjust treatment plan as needed, or sooner if symptoms worsen or new concerns arise.",0.24748880009389734,0.78,0.5137444000469487,Structure: Document format issues; Missing required keywords | Clinical: Failed to extract age
+44,"**Patient Demographics**
+
+Name: Emily Wilson
+Unit No: 1234567
+Admission Date: 2024-06-01
+Discharge Date: 2024-06-15
+Date of Birth: 2007-05-26
+Sex: Female
+Service: OBSTETRICS
+
+**Admission Diagnosis**
+
+Urinary Tract Infection (UTI) with symptoms of fever and flank pain.
+
+**Discharge Diagnosis**
+Primary diagnosis: Urinary Tract Infection (UTI)
+Secondary diagnoses: None
+
+**Hospital Course**
+
+Emily Wilson was admitted to the hospital on June 1st with symptoms of a urinary tract infection, including fever and flank pain. The patient underwent a urine culture and sensitivity test, which confirmed the presence of E. coli. Antibiotic treatment was initiated immediately, and the patient showed significant improvement over the next few days.
+
+**Discharge Medications**
+
+* Amoxicillin 500 mg PO TID for 7 days
+* Hydrated with oral fluids to at least 8 glasses per day
+
+**Discharge Instructions**
+
+Dear Emily,
+
+You were admitted to the hospital with a urinary tract infection. The good news is that you responded well to treatment, and your symptoms have improved significantly.
+
+Please continue taking Amoxicillin for the next 7 days as directed above. It's essential to complete the full course of antibiotics to ensure the infection is fully cleared.
+
+In addition to your medication, please make sure to drink plenty of fluids to stay hydrated. Aim for at least 8 glasses per day.
+
+If you experience any of the following symptoms, please contact your primary care doctor or return to the emergency department:
+
+* Increased fever
+* Severe abdominal pain
+* Difficulty starting urination
+
+Thank you for trusting us with your care. Please schedule a follow-up appointment with Dr. Rachel Kim in 1 week to monitor your progress.
+
+Best regards,
+Your Edwards Obstetrics Team",0.42067860546175356,0.45,0.4353393027308768,Structure: Document format issues; Missing required keywords
+45,"**Name:** Emily Wilson  
+**Unit No.:** 5321123  
+ 
+**Admission Date:** 2024-06-17  
+**Discharge Date:** 2024-07-04  
+
+**Date of Birth:** 1982-12-19  
+**Sex:** Female  
+
+**Service:** OBSTETRICS
+
+**Allergies:**
+No Known Allergies / Adverse Drug Reactions
+
+**Attending:** Dr. Rachel Lee
+
+**Discharge Medications:**
+
+1. Metformin 500 mg PO DAILY
+2. Omeprazole 20 mg PO DAILY
+3. Multivitamin (Women's) 1 tablet PO DAILY
+4. Acetaminophen 650 mg PO Q6H PRN pain
+5. Hydrocortisone 10 mg PO BID
+
+**Discharge Disposition:**
+Home
+
+**Discharge Diagnosis:**
+
+Primary diagnosis: **Gestational Diabetes Mellitus (O70)**
+Secondary diagnoses: **Pregnancy Induced Hypertension (O13)**
+
+**Discharge Condition:**
+Mental Status: Clear and coherent.
+Level of Consciousness: Alert and interactive.
+Activity Status: Ambulatory - Independent.
+
+**Discharge Instructions:**
+
+Dear Ms. Wilson,
+
+You were admitted to the hospital due to uncontrolled gestational diabetes mellitus and pregnancy induced hypertension.
+We have started you on metformin, omeprazole, multivitamin, acetaminophen for pain management, and hydrocortisone for mild symptoms.
+
+Please follow up with your primary care doctor as an outpatient and continue all of your home medications unless specifically instructed to stop by your doctor. 
+
+Please call your doctor or return to the emergency department if you experience any of the following:
+- New onset of vaginal bleeding, severe abdominal pain, or fever over 101.5°F.
+- Any other worrisome symptoms that you feel your doctor should know about.
+
+Thank you for allowing us to participate in your care,
+Your Obstetrics Team
+
+**Followup Instructions:**
+Schedule a follow-up appointment with Dr. Rachel Lee in 2 weeks to monitor progress and adjust treatment plan as needed, or sooner if symptoms worsen or new concerns arise.",0.287630276835841,0.35,0.31881513841792053,Structure: Document format issues; Missing required keywords | Clinical: Failed to extract age
+46,"**Name:** John Smith                              **Unit No:** 5314567
+ 
+**Admission Date:** 2024-06-15              **Discharge Date:**   2024-07-05
+ 
+**Date of Birth:** 1953-02-14             **Sex:**   M
+ 
+**Service:** CARDIOLOGY
+ 
+**Allergies:**
+No Known Allergies / Adverse Drug Reactions
+
+**Attending:** Dr. Emily Chen
+
+**Discharge Medications:**
+1. Aspirin 81 mg PO DAILY 
+2. Lisinopril 20 mg PO DAILY
+3. Metformin 500 mg PO BID
+4. Simvastatin 40 mg PO DAILY
+
+**Discharge Disposition:** Home
+ 
+**Discharge Diagnosis:**
+Primary diagnosis:  Chronic Stable Angina (I25.1)
+Secondary diagnoses:  Hypertension, Hyperlipidemia
+
+**Discharge Condition:**
+Mental Status: Clear and coherent.
+Level of Consciousness: Alert and interactive.
+Activity Status: Ambulatory - Independent.
+
+**Discharge Instructions:**
+
+Dear Mr. Smith,
+
+You were admitted to the hospital for evaluation of chest pain and shortness of breath.
+The cardiologists felt that you have stable angina and hypertension, which will require long-term management.
+
+Please follow up with your primary care doctor as an outpatient and continue all of your home medications unless specifically instructed 
+to stop by your doctor. 
+
+Please call your doctor or return to the emergency department if you experience any of the following:
+- New onset of chest pain or shortness of breath
+- Any other worrisome symptoms that you feel your doctor should know about.
+
+Thank you for allowing us to participate in your care,
+Your Cardiology Team
+ 
+**Followup Instructions:**
+Schedule a follow-up appointment with Dr. Emily Chen in 2 weeks to monitor progress and adjust treatment plan as needed, or sooner if symptoms worsen or new concerns arise.",0.287630276835841,0.6,0.44381513841792053,Structure: Document format issues; Missing required keywords | Clinical: Failed to extract age
+47,"**Patient Demographics**
+Name: Emily Wilson
+Date of Birth: 1953-01-19
+Sex: Female
+Age: 72
+
+**Admission Diagnosis**: Chronic Obstructive Pulmonary Disease (COPD) Exacerbation with Pneumonia
+
+**Discharge Diagnosis**: 
+Primary diagnosis: COPD Exacerbation with Pneumonia (J44.1)
+Secondary diagnoses: Hypertension (I10), Hyperlipidemia (E78.5)
+
+**Hospital Course**: The patient was admitted with symptoms of shortness of breath, coughing, and fever for 3 days prior to admission. She received antibiotics IV (Ceftriaxone 1 gram Q12H) and bronchodilators IV (Albuterol 2.5 mg/min) as per the attending physician's orders. The patient showed significant improvement with increased oxygen saturation levels and decreased respiratory rate.
+
+**Discharge Medications**:
+1. Albuterol Inhalation Aerosol 90 mcg/puff MDI Q6H 
+2. Ipratropium Bromide 20 mg/0.5 mL nebulizer solution Q6H:PRN
+3. Ciprofloxacin 500 mg PO BID for 7 days
+4. Azithromycin 250 mg PO DAILY for 5 days
+
+**Discharge Instructions**: 
+Dear Emily,
+
+You were admitted to the hospital due to worsening symptoms of COPD and pneumonia. We have started you on antibiotics, bronchodilators, and oxygen therapy, which has improved your condition significantly.
+
+To manage your symptoms at home:
+- Use your inhalers as directed
+- Take your medications regularly
+- Increase fluid intake to thin out secretions
+- Rest when experiencing shortness of breath
+
+Please follow up with your primary care doctor in 1 week to monitor your progress. If you experience any of the following, please call your doctor or return to the emergency department:
+- Worsening shortness of breath
+- Increased coughing and sputum production
+- Fever above 102°F (39°C)
+
+Thank you for allowing us to participate in your care,
+Your General Medicine Team
+
+**Followup Instructions**: Schedule a follow-up appointment with Dr. Rachel Kim in 1 week to monitor progress and adjust treatment plan as needed, or sooner if symptoms worsen or new concerns arise.",0.19060297643069973,0.55,0.3703014882153499,Structure: Document format issues; Missing required keywords | Clinical: Failed to extract age
+48,"**Name:** Emily Wilson
+**Unit No.:** 5311234
+**Admission Date:** 2023-09-10
+**Discharge Date:** 2023-09-15
+**Date of Birth:** 1996-12-11
+**Sex:** F
+**Service:** GENERAL_MEDICINE
+
+**Allergies:**
+No Known Allergies / Adverse Drug Reactions
+
+**Attending:** Dr. Sarah Taylor
+
+**Discharge Medications:**
+
+1. **Lisinopril** 10 mg PO DAILY
+2. **Hydrochlorothiazide** 25 mg PO DAILY
+3. **Amoxicillin** 500 mg PO TID for 7 days (for suspected strep throat)
+4. **Acetaminophen** 650 mg PO Q6H
+
+**Discharge Diagnosis:**
+
+Primary diagnosis: Acute Pharyngitis
+Secondary diagnoses: Hypertension, Hypercholesterolemia
+
+**Discharge Condition:**
+Mental Status: Clear and coherent.
+Level of Consciousness: Alert and interactive.
+Activity Status: Ambulatory - Independent.
+
+**Discharge Instructions:**
+
+Dear Ms. Wilson,
+
+You were admitted to the hospital with symptoms of a sore throat and fever.
+The results from your strep test came back positive, so we have prescribed an antibiotic (Amoxicillin) for 7 days. 
+Please make sure to take it exactly as directed, three times a day.
+
+In addition to the antibiotics, you will also be taking Lisinopril and Hydrochlorothiazide daily to help control your blood pressure.
+Remember to take Acetaminophen every six hours as needed for pain or fever relief.
+
+Please follow up with your primary care doctor as an outpatient and continue all of your home medications unless specifically instructed 
+to stop by your doctor. 
+
+Please call your doctor or return to the emergency department if you experience any of the following:
+- New onset of difficulty swallowing, shortness of breath, chest pain.
+- Any other worrisome symptoms that you feel your doctor should know about.
+
+Thank you for allowing us to participate in your care,
+Your General Medicine Team
+
+**Followup Instructions:**
+Schedule a follow-up appointment with Dr. Sarah Taylor in 1 week to monitor progress and adjust treatment plan as needed, or sooner if symptoms worsen or new concerns arise.",0.276069617394757,0.55,0.4130348086973785,Structure: Document format issues; Missing required keywords | Clinical: Failed to extract age
+49,"**Patient Demographics**
+
+Name: John Doe
+Unit No: 5314456
+Admission Date: 2024-07-10
+Discharge Date: 2024-07-15
+Date of Birth: 1979-01-02
+Sex: M
+
+**Admission Diagnosis**
+Posterior Hip Replacement Surgery, Status Post Fracture Displacement
+
+**Discharge Diagnosis**
+Primary diagnosis: S-92.0 - Subtrochanteric fractures of femur, unspecified (ICD-10)
+Secondary diagnoses: Osteoarthritis of the hip joint
+
+**Hospital Course**
+The patient was admitted for a posterior hip replacement surgery following a subtrochanteric fracture displacement. The surgery was performed without any complications. Post-operative pain management and wound care were addressed.
+
+**Discharge Medications**
+
+1. Acetaminophen 500 mg PO Q6H
+2. Ibuprofen 400 mg PO TID:PRN pain
+3. Diclofenac Sodium 75 mg PO BID:PRN inflammation
+4. Mefenamic Acid 250 mg PO QID:PRN pain and inflammation
+
+**Discharge Instructions**
+
+Dear Mr. Doe,
+
+Congratulations on a successful surgery! Your recovery process will take some time, but with proper care and precautions, you should be able to return home safely.
+
+Please follow these instructions carefully:
+
+* Take your medications exactly as directed above.
+* Rest and avoid heavy lifting for the next 6-8 weeks.
+* Follow a gentle exercise program as recommended by your physical therapist.
+* Attend all scheduled post-operative appointments with your surgeon.
+* Monitor for any signs of infection, such as redness, swelling, or increased pain at the surgical site.
+
+Do not hesitate to contact us if you experience:
+
+* Increasing pain that is not controlled by your medications
+* Redness, swelling, or increased pain at the surgical site
+* Difficulty moving or bearing weight on the affected hip
+
+Thank you for entrusting us with your care. We wish you a smooth and speedy recovery.
+
+Sincerely,
+Your Orthopedic Team",0.40038469338515226,0.35,0.3751923466925761,Structure: Document format issues; Missing required keywords

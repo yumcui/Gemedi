@@ -73,10 +73,10 @@ def extract_phi_from_text(text: str) -> list:
     """Extract PHI information from text and build phi_annotations"""
     phi_annotations = []
     
-    # Extract name
-    name_match = re.search(r'Name:\s+([A-Za-z\s]+?)(?:\s+Unit No:|$)', text, re.IGNORECASE)
+    # Extract name (supports Markdown bold format)
+    name_match = re.search(r'\*\*Name:\*\*\s+([A-Za-z\s]+?)(?:\s+\*\*Unit|$)|Name:\s+([A-Za-z\s]+?)(?:\s+Unit No:|$)', text, re.IGNORECASE)
     if name_match:
-        name = name_match.group(1).strip()
+        name = (name_match.group(1) or name_match.group(2) or "").strip()
         if name:
             phi_annotations.append({
                 "value": name,
@@ -84,60 +84,60 @@ def extract_phi_from_text(text: str) -> list:
                 "reason": "Patient's name extracted from text"
             })
     
-    # Extract Unit No
-    unit_match = re.search(r'Unit No:\s*(\d+)', text, re.IGNORECASE)
+    # Extract Unit No (supports Markdown bold format)
+    unit_match = re.search(r'\*\*Unit No[\.:]?\*\*\s*(\d+)|Unit No[\.:]?\s*(\d+)', text, re.IGNORECASE)
     if unit_match:
-        unit_no = unit_match.group(1).strip()
+        unit_no = (unit_match.group(1) or unit_match.group(2) or "").strip()
         phi_annotations.append({
             "value": unit_no,
             "type": "UNIT_NO",
             "reason": "Unit number extracted from text"
         })
     
-    # Extract Admission Date
-    adm_match = re.search(r'Admission Date:\s*([0-9\-\/]+)', text, re.IGNORECASE)
+    # Extract Admission Date (supports Markdown bold format)
+    adm_match = re.search(r'\*\*Admission Date:\*\*\s*([0-9\-\/]+)|Admission Date:\s*([0-9\-\/]+)', text, re.IGNORECASE)
     if adm_match:
-        adm_date = adm_match.group(1).strip()
+        adm_date = (adm_match.group(1) or adm_match.group(2) or "").strip()
         phi_annotations.append({
             "value": adm_date,
             "type": "DATE_OF_ADMISSION",
             "reason": "Admission date extracted from text"
         })
     
-    # Extract Discharge Date
-    dis_match = re.search(r'Discharge Date:\s*([0-9\-\/]+)', text, re.IGNORECASE)
+    # Extract Discharge Date (supports Markdown bold format)
+    dis_match = re.search(r'\*\*Discharge Date:\*\*\s*([0-9\-\/]+)|Discharge Date:\s*([0-9\-\/]+)', text, re.IGNORECASE)
     if dis_match:
-        dis_date = dis_match.group(1).strip()
+        dis_date = (dis_match.group(1) or dis_match.group(2) or "").strip()
         phi_annotations.append({
             "value": dis_date,
             "type": "DISCHARGE_DATE",
             "reason": "Discharge date extracted from text"
         })
     
-    # Extract Date of Birth
-    dob_match = re.search(r'(?:Date of Birth|DOB):\s*([0-9\-\/]+)', text, re.IGNORECASE)
+    # Extract Date of Birth (supports Markdown bold format)
+    dob_match = re.search(r'\*\*(?:Date of Birth|DOB):\*\*\s*([0-9\-\/]+)|(?:Date of Birth|DOB):\s*([0-9\-\/]+)', text, re.IGNORECASE)
     if dob_match:
-        dob = dob_match.group(1).strip()
+        dob = (dob_match.group(1) or dob_match.group(2) or "").strip()
         phi_annotations.append({
             "value": dob,
             "type": "DATE_OF_BIRTH",
             "reason": "Date of birth extracted from text"
         })
     
-    # Extract Sex
-    sex_match = re.search(r'Sex:\s*([MF])', text, re.IGNORECASE)
+    # Extract Sex (supports Markdown bold format)
+    sex_match = re.search(r'\*\*Sex:\*\*\s*([MF])|Sex:\s*([MF])', text, re.IGNORECASE)
     if sex_match:
-        sex = sex_match.group(1).strip()
+        sex = (sex_match.group(1) or sex_match.group(2) or "").strip()
         phi_annotations.append({
             "value": sex,
             "type": "SEX",
             "reason": "Sex extracted from text"
         })
     
-    # Extract Attending Doctor
-    attending_match = re.search(r'Attending:\s*(Dr\.?\s+[A-Za-z\s]+)', text, re.IGNORECASE)
+    # Extract Attending Doctor (supports Markdown bold format)
+    attending_match = re.search(r'\*\*Attending:\*\*\s*(Dr\.?\s+[A-Za-z\s]+)|Attending:\s*(Dr\.?\s+[A-Za-z\s]+)', text, re.IGNORECASE)
     if attending_match:
-        doctor = attending_match.group(1).strip()
+        doctor = (attending_match.group(1) or attending_match.group(2) or "").strip()
         phi_annotations.append({
             "value": doctor,
             "type": "PROVIDER_NAME",
