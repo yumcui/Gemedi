@@ -1,0 +1,99 @@
+## SLURM PROLOG ###############################################################
+##    Job ID : 14736215
+##  Job Name : test_discriminator_v2.sh
+##  Nodelist : gpu2102
+##      CPUs : 
+##  Mem/Node : 32768 MB
+## Directory : /oscar/home/zzhou190/projects/evaluation/Gemedi/discriminator
+##   Job Started : Sun Dec  7 05:07:50 PM EST 2025
+###############################################################################
+Loading model: meta-llama/Meta-Llama-3.1-8B-Instruct
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:  25%|██▌       | 1/4 [00:11<00:35, 11.96s/it]Loading checkpoint shards:  50%|█████     | 2/4 [00:20<00:19,  9.69s/it]Loading checkpoint shards:  75%|███████▌  | 3/4 [00:26<00:08,  8.10s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:31<00:00,  7.14s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:31<00:00,  7.98s/it]
+The following generation flags are not valid and may be ignored: ['temperature', 'top_p']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Setting `pad_token_id` to `eos_token_id`:128001 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:128001 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:128001 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:128001 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:128001 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:128001 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:128001 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:128001 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:128001 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:128001 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:128001 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:128001 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:128001 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:128001 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:128001 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:128001 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:128001 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:128001 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:128001 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:128001 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:128001 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:128001 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:128001 for open-end generation.
+Setting `pad_token_id` to `eos_token_id`:128001 for open-end generation.
+Loading JSONL: eval_discriminator_v2.jsonl
+Loaded 24 records.
+
+=== Processing record 1/24 ===
+
+=== Processing record 2/24 ===
+
+=== Processing record 3/24 ===
+
+=== Processing record 4/24 ===
+
+=== Processing record 5/24 ===
+
+=== Processing record 6/24 ===
+
+=== Processing record 7/24 ===
+
+=== Processing record 8/24 ===
+
+=== Processing record 9/24 ===
+
+=== Processing record 10/24 ===
+
+=== Processing record 11/24 ===
+
+[WARNING] JSONDecodeError: Expecting value: line 2 column 17 (char 18)
+[ERROR TEXT] Could not parse: {
+  "diagnoses": [...],
+  "issues": "description of inconsistencies"
+}...
+[WARNING] JSON parse failed. Using empty fields.
+
+
+=== Processing record 12/24 ===
+
+=== Processing record 13/24 ===
+
+=== Processing record 14/24 ===
+
+=== Processing record 15/24 ===
+
+=== Processing record 16/24 ===
+
+=== Processing record 17/24 ===
+
+=== Processing record 18/24 ===
+
+=== Processing record 19/24 ===
+
+=== Processing record 20/24 ===
+
+=== Processing record 21/24 ===
+
+=== Processing record 22/24 ===
+
+=== Processing record 23/24 ===
+
+=== Processing record 24/24 ===
+
+Saving CSV → eval_issues.csv
+Done.
+
+All done! Output CSV: eval_issues.csv

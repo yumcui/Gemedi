@@ -6,11 +6,10 @@
 #SBATCH --mem=32G
 #SBATCH -o slurm-discriminator-%j.out
 
-
 module load python/3.11.0s-ixrhc3q cuda/12.1.1
 
-source /oscar/home/yshi119/Gemedi/llama_env/bin/activate
-
+current_directory=$(pwd)
+source $current_directory/llama_env/bin/activate
 
 python finetune_discriminator.py \
   --base_model meta-llama/Meta-Llama-3.1-8B-Instruct \

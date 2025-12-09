@@ -162,7 +162,6 @@ def main():
         eval_dataset=eval_dataset,
         formatting_func=formatting_prompts_func,
         data_collator=collator,
-        max_seq_length=args.max_length,
         args=training_args,
     )
 
