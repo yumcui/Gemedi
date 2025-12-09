@@ -1,0 +1,12 @@
+
+============================================================
+Evaluation Summary
+============================================================
+Input CSV: generated_with_discriminator_v2/corrected_medical_notes_new.csv
+Output CSV: generated_with_discriminator_v2/corrected_medical_notes_new_evaluated.csv
+Total Rows Evaluated: 25
+
+Average Realism Score: 0.9180
+Average Gemini Medical Reasoning Score: 0.5020
+Average Overall Score: 0.7100
+============================================================
