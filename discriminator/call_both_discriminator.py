@@ -1,13 +1,13 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Call both fine-tuned discriminator and base model discriminator_v2.
+Call both fine-tuned discriminator and Medical Reasoning discriminator.
 
 This script reads a CSV file with medical notes, calls both models,
 and outputs a CSV with 3 columns:
 1. medical_note: Original medical note
-2. realism_reasoning: Output from fine-tuned llama3-discriminator
-3. medical_reasoning: Output from base model (discriminator_v2 logic)
+2. realism_reasoning: Output from fine-tuned llama3-discriminator (your LoRA)
+3. medical_reasoning: Output from Medical Reasoning Model (Llama 3.1) as a detailed "reason" string
 """
 
 import csv
@@ -23,11 +23,44 @@ from transformers import (
     BitsAndBytesConfig,
 )
 from peft import PeftModel
+import google.generativeai as genai
+import time
+from collections import deque
+from threading import Lock
+
+# ------------------------------------------------------------------------
+# Rate Limiter for Gemini
+# ------------------------------------------------------------------------
+class RateLimiter:
+    def __init__(self, max_requests: int = 10, time_window: int = 60):
+        self.max_requests = max_requests
+        self.time_window = time_window
+        self.requests = deque()
+        self.lock = Lock()
+    
+    def wait_if_needed(self):
+        with self.lock:
+            now = time.time()
+            while self.requests and self.requests[0] < now - self.time_window:
+                self.requests.popleft()
+            if len(self.requests) >= self.max_requests:
+                wait_time = self.time_window - (now - self.requests[0]) + 1
+                if wait_time > 0:
+                    time.sleep(wait_time)
+                    now = time.time()
+                    while self.requests and self.requests[0] < now - self.time_window:
+                        self.requests.popleft()
+            self.requests.append(time.time())
+
+gemini_rate_limiter = RateLimiter(max_requests=8, time_window=60)
 
 # ------------------------------------------------------------------------
 # Configuration
 # ------------------------------------------------------------------------
-BASE_MODEL_ID = "meta-llama/Meta-Llama-3.1-8B-Instruct"
+BASE_MODEL_ID = "meta-llama/Meta-Llama-3.1-8B-Instruct"   # For fine-tuned model (realism)
+# MEDICAL_REASONING_MODEL removed in favor of Gemini API
+GEMINI_MODEL_NAME = "gemini-2.5-flash"
+
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 ADAPTER_PATH = os.path.join(SCRIPT_DIR, "llama3-discriminator")
 
@@ -35,7 +68,11 @@ ADAPTER_PATH = os.path.join(SCRIPT_DIR, "llama3-discriminator")
 DEFAULT_INPUT_CSV = os.path.join(SCRIPT_DIR, "generated_medical_notes_cot.csv")
 DEFAULT_OUTPUT_CSV = os.path.join(SCRIPT_DIR, "both_discriminator_output.csv")
 
-# Fine-tuned discriminator prompt (realism reasoning)
+# ------------------------------------------------------------------------
+# 1. PROMPTS
+# ------------------------------------------------------------------------
+
+# Fine-tuned discriminator prompt (realism reasoning) - 你自己的 LoRA 用的
 FINE_TUNED_SYSTEM_PROMPT = """You are an expert clinical documentation auditor specializing in detecting:
 - factual inconsistencies
 - missing clinical justification
@@ -60,60 +97,34 @@ EXAMPLES:
 ✓ Good note → {"reason": "good"}
 ✗ Bad note → {"reason": "Name error:'Wagner'[less than 2 words]; admission date >= discharge date"}"""
 
-# Base model discriminator_v2 prompt (medical reasoning)
-BASE_MODEL_SYSTEM_PROMPT = """You are an expert clinical documentation auditor specializing in detecting medical logic errors and inconsistencies.
 
-Your task is to analyze the medical note and identify *any* of the following errors:
+# Medical Reasoning discriminator prompt (was BioMistral)
+MEDICAL_REASONING_SYSTEM_PROMPT = """
+You are an expert medical discriminator specializing in evaluating generated medical notes.
 
-1. **Clinical Logic Errors**:
-   - Age/sex mismatch with diagnosis (e.g., pediatric condition in elderly, male-specific condition in female)
-   - Biologically implausible disease combinations
-   - Inappropriate diagnosis for patient demographics
+Your task is to analyze the provided medical note and identify all medical reasoning errors, factual inconsistencies, and clinical logic issues.
 
-2. **Medication Logic Errors**:
-   - Medications that don't match the diagnosis
-   - Missing standard medications for the diagnosis
-   - Inappropriate medication for patient age/condition
-   - Dosage/route/frequency inconsistencies
-
-3. **Timeline Errors**:
-   - Admission date >= Discharge date
-   - Dates that don't make clinical sense
-   - Impossible temporal sequences
-
-4. **PHI (Protected Health Information) Inconsistencies**:
-   - Name format errors (less than 2 words, invalid characters)
-   - Date format inconsistencies
-   - Age calculation errors (DOB vs admission/discharge dates)
-
-5. **Internal Consistency Errors**:
-   - Contradictions between different sections
-   - Discharge instructions that don't match diagnosis
-   - Treatment plan inconsistencies
+Please provide a detailed list of errors to help the user correct the note.
+- If the note is logically correct → output {"reason": "good"}
+- If there are errors → output {"reason": "1. Error 1... 2. Error 2..."} (detailed explanation)
 
 STRICT RULES:
-- DO NOT modify or rewrite the note.
-- If you find NO errors, output exactly "good".
-- If you find errors, provide a concise reasoning (≤50 words) describing the specific issues.
-- Do NOT invent problems that don't exist.
-- Focus on factual medical logic errors, not stylistic preferences.
+- Output MUST be valid JSON.
+- Output must contain exactly one key: "reason".
+- The value of "reason" should be a detailed string describing the errors.
+- Do NOT output tags, labels, or multiple fields.
+- Do NOT copy or restate the instructions or the note outside the JSON object.
+- Do NOT add any explanation before or after the JSON.
 
-OUTPUT FORMAT:
-Return ONLY a JSON object with this structure:
-{
-  "issues": "good" OR "concise description of the medical logic error(s)"
-}
-
-EXAMPLES:
-✓ Good note → {"issues": "good"}
-✗ Age mismatch → {"issues": "Age 5 with diagnosis 'Benign Prostatic Hyperplasia' (BPH) is biologically impossible; BPH only occurs in adult males"}
-✗ Timeline error → {"issues": "Admission date (2024-09-15) is after discharge date (2024-09-10)"}
-✗ Medication mismatch → {"issues": "Diagnosis is 'Acute Myocardial Infarction' but no antiplatelet or statin medications prescribed"}
+Examples:
+{"reason": "good"}
+{"reason": "1. Timeline error: discharge date (2023-01-01) is before admission date (2023-01-05). 2. Medication mismatch: Patient has Penicillin allergy but Amoxicillin was prescribed."}
 """
 
 # ------------------------------------------------------------------------
-# Load Models
+# 2. Load Models
 # ------------------------------------------------------------------------
+
 def load_fine_tuned_model():
     """Load the fine-tuned discriminator model (llama3-discriminator)"""
     print(f"Loading fine-tuned model: {BASE_MODEL_ID} + {ADAPTER_PATH} ...")
@@ -147,38 +158,52 @@ def load_fine_tuned_model():
     print("Fine-tuned model loaded successfully!")
     return model, tokenizer
 
-def load_base_model():
-    """Load the base model for discriminator_v2 logic"""
-    print(f"Loading base model: {BASE_MODEL_ID} ...")
+
+def configure_gemini():
+    """Configure Gemini API"""
+    api_key = os.environ.get('GEMINI_API_KEY')
+    if not api_key:
+        print("Error: GEMINI_API_KEY environment variable is not set.")
+        print("Please set it using: export GEMINI_API_KEY='your-api-key'")
+        sys.exit(1)
     
-    model = AutoModelForCausalLM.from_pretrained(
-        BASE_MODEL_ID,
-        dtype=torch.float16,
-        device_map="auto"
-    )
-    tokenizer = AutoTokenizer.from_pretrained(BASE_MODEL_ID, use_fast=True)
-    
-    if tokenizer.pad_token is None:
-        tokenizer.pad_token = tokenizer.eos_token
-    
-    print("Base model loaded successfully!")
-    return model, tokenizer
+    genai.configure(api_key=api_key)
+    print("Gemini API configured successfully!")
+    return api_key
 
 # ------------------------------------------------------------------------
-# Inference Functions
+# 3. Inference Functions
 # ------------------------------------------------------------------------
+
 def generate_fine_tuned_prediction(model, tokenizer, note_content):
     """Generate prediction using fine-tuned discriminator (realism reasoning)"""
-    messages = [
-        {"role": "system", "content": FINE_TUNED_SYSTEM_PROMPT},
-        {"role": "user", "content": f"Medical Note:\n---\n{note_content}\n---"},
-    ]
+    combined_prompt = f"{FINE_TUNED_SYSTEM_PROMPT}\n\nMedical Note:\n---\n{note_content}\n---"
     
-    input_text = tokenizer.apply_chat_template(
-        messages, 
-        tokenize=False, 
-        add_generation_prompt=True
-    )
+    # 使用 system+user（Llama 3.1 支持）
+    try:
+        messages = [
+            {"role": "system", "content": FINE_TUNED_SYSTEM_PROMPT},
+            {"role": "user", "content": f"Medical Note:\n---\n{note_content}\n---"},
+        ]
+        
+        input_text = tokenizer.apply_chat_template(
+            messages, 
+            tokenize=False, 
+            add_generation_prompt=True
+        )
+    except Exception:
+        # fallback：只有 user，一次性拼 prompt
+        messages = [
+            {"role": "user", "content": combined_prompt},
+        ]
+        try:
+            input_text = tokenizer.apply_chat_template(
+                messages, 
+                tokenize=False, 
+                add_generation_prompt=True
+            )
+        except Exception:
+            input_text = combined_prompt
     
     inputs = tokenizer(input_text, return_tensors="pt").to(model.device)
 
@@ -196,38 +221,58 @@ def generate_fine_tuned_prediction(model, tokenizer, note_content):
     
     return response.strip()
 
-def generate_base_model_prediction(model, tokenizer, note_content):
-    """Generate prediction using base model (discriminator_v2 logic, medical reasoning)"""
-    messages = [
-        {"role": "system", "content": BASE_MODEL_SYSTEM_PROMPT},
-        {"role": "user", "content": f"Medical Note:\n---\n{note_content}\n---\n\nAnalyze this medical note for logic errors and inconsistencies."}
-    ]
-    
-    input_text = tokenizer.apply_chat_template(
-        messages,
-        tokenize=False,
-        add_generation_prompt=True
-    )
-    
-    inputs = tokenizer(input_text, return_tensors="pt").to(model.device)
 
-    with torch.no_grad():
-        output = model.generate(
-            **inputs,
-            max_new_tokens=200,
-            do_sample=False,
-            temperature=0.1,
-            pad_token_id=tokenizer.eos_token_id
-        )
-
-    generated_ids = output[0][inputs.input_ids.shape[1]:]
-    decoded = tokenizer.decode(generated_ids, skip_special_tokens=True).strip()
+def generate_gemini_prediction(note_content, max_retries=3):
+    """
+    Use Gemini API for medical reasoning.
+    Target: Output JSON string like {"reason": "..."}.
+    """
+    model = genai.GenerativeModel(GEMINI_MODEL_NAME)
     
-    return decoded
+    prompt = f"""
+{MEDICAL_REASONING_SYSTEM_PROMPT}
+
+Medical Note:
+---
+{note_content}
+---
+
+Return ONLY the JSON object.
+"""
+
+    for attempt in range(max_retries + 1):
+        try:
+            # Apply rate limiting
+            gemini_rate_limiter.wait_if_needed()
+            
+            response = model.generate_content(prompt)
+            return response.text.strip()
+            
+        except Exception as e:
+            error_str = str(e)
+            
+            # Check for rate limit error (429)
+            if "429" in error_str or "quota" in error_str.lower() or "rate limit" in error_str.lower():
+                wait_time = (attempt + 1) * 10
+                if attempt < max_retries:
+                    print(f"\nWarning: Gemini rate limit exceeded. Waiting {wait_time}s...")
+                    time.sleep(wait_time)
+                    continue
+            
+            # Other errors
+            if attempt < max_retries:
+                print(f"\nWarning: Gemini API error (attempt {attempt + 1}): {e}")
+                time.sleep(2)
+                continue
+            
+            return f'{{"reason": "ERROR: Gemini API failed: {str(e)[:100]}"}}'
+
+    return '{"reason": "ERROR: Gemini API failed after retries"}'
 
 # ------------------------------------------------------------------------
-# Parse Responses
+# 4. Parse Responses
 # ------------------------------------------------------------------------
+
 def parse_fine_tuned_response(response_text):
     """Parse fine-tuned model response (expects {"reason": "..."})"""
     response_text = response_text.strip()
@@ -250,51 +295,36 @@ def parse_fine_tuned_response(response_text):
         # No JSON found, return raw response
         return response_text
 
-def parse_base_model_response(response_text):
-    """Parse base model response (expects {"issues": "..."})"""
-    response_text = response_text.strip()
-    
-    json_match = re.search(r'\{[\s\S]*?"issues"[\s\S]*?\}', response_text, re.DOTALL)
+
+def parse_base_model_response(text):
+    """Extract {"reason": "..."} from model output."""
+    text = text.strip()
+
+    # Try to find a JSON-like object containing "reason"
+    json_match = re.search(r'\{[\s\S]*?"reason"[\s\S]*?\}', text, re.DOTALL)
     
     if json_match:
         json_text = json_match.group(0).strip()
-        
-        while True:
-            try:
-                data = json.loads(json_text)
-                issues = data.get("issues", "")
-                if issues:
-                    return issues
-                break
-            except json.JSONDecodeError as e:
-                if "Extra data" in str(e):
-                    last_brace_index = json_text.rfind('}')
-                    if last_brace_index != -1:
-                        json_text = json_text[:last_brace_index + 1].strip()
-                        continue
-                
-                # Try to extract "issues" value directly
-                issues_match = re.search(r'"issues"\s*:\s*"([^"]+)"', json_text)
-                if issues_match:
-                    return issues_match.group(1)
-                break
-            except Exception:
-                break
-    
-    # Fallback: check if response contains "good"
-    response_lower = response_text.lower()
-    if "good" in response_lower and len(response_text) < 20:
-        return "good"
-    
-    # Return decoded text (might be reasoning)
-    if response_text:
-        return response_text[:200]  # Limit length
-    
-    return ""
+        try:
+            data = json.loads(json_text)
+            reason = data.get("reason", "").strip()
+            return reason
+        except json.JSONDecodeError:
+            # Try to extract "reason" value directly if JSON parse fails
+            reason_match = re.search(r'"reason"\s*:\s*"([\s\S]*?)"', json_text)
+            if reason_match:
+                return reason_match.group(1)
+            return f"ERROR: JSON parse failed ({json_text[:100]})"
+    else:
+        # Fallback
+        if "good" in text.lower() and len(text) < 50:
+            return "good"
+        return f"ERROR: could not parse ({text[:200]})"
 
 # ------------------------------------------------------------------------
-# Main Function
+# 5. Main Function
 # ------------------------------------------------------------------------
+
 def main():
     """Main execution function"""
     # Parse command line arguments
@@ -307,16 +337,16 @@ def main():
         output_csv = sys.argv[2]
     
     print("="*60)
-    print("Both Discriminator Evaluation")
+    print("Both Discriminator Evaluation (LoRA Llama + Gemini API)")
     print("="*60)
     print(f"Input CSV: {input_csv}")
     print(f"Output CSV: {output_csv}")
     print("="*60)
     
-    # Load both models
-    print("\nLoading models...")
+    # Load models and configure API
+    print("\nLoading fine-tuned model and configuring Gemini...")
     fine_tuned_model, fine_tuned_tokenizer = load_fine_tuned_model()
-    base_model, base_tokenizer = load_base_model()
+    configure_gemini()
     
     # Read CSV file
     print(f"\nReading CSV file: {input_csv}")
@@ -331,7 +361,7 @@ def main():
             for row in reader:
                 note_content = row[column_name] if column_name else row[list(row.keys())[0]]
                 # Handle CSV quoting
-                if note_content.startswith('"') and note_content.endswith('"'):
+                if isinstance(note_content, str) and note_content.startswith('"') and note_content.endswith('"'):
                     note_content = note_content[1:-1]
                 notes.append(note_content)
         
@@ -351,23 +381,29 @@ def main():
         writer.writerow(["medical_note", "realism_reasoning", "medical_reasoning"])
         
         for i, note_content in enumerate(tqdm(notes, desc="Processing")):
-            if not note_content or not note_content.strip():
+            if not note_content or not str(note_content).strip():
                 writer.writerow([note_content, "", ""])
                 f_out.flush()
                 continue
             
             try:
                 # Call fine-tuned discriminator (realism reasoning)
-                fine_tuned_raw = generate_fine_tuned_prediction(
-                    fine_tuned_model, fine_tuned_tokenizer, note_content
-                )
-                realism_reasoning = parse_fine_tuned_response(fine_tuned_raw)
+                try:
+                    fine_tuned_raw = generate_fine_tuned_prediction(
+                        fine_tuned_model, fine_tuned_tokenizer, note_content
+                    )
+                    realism_reasoning = parse_fine_tuned_response(fine_tuned_raw)
+                except Exception as e1:
+                    print(f"\nWarning: Fine-tuned model error for note {i+1}: {e1}")
+                    realism_reasoning = f"ERROR: {str(e1)[:100]}"
                 
-                # Call base model discriminator_v2 (medical reasoning)
-                base_raw = generate_base_model_prediction(
-                    base_model, base_tokenizer, note_content
-                )
-                medical_reasoning = parse_base_model_response(base_raw)
+                # Call Gemini API (medical reasoning)
+                try:
+                    base_raw = generate_gemini_prediction(note_content)
+                    medical_reasoning = parse_base_model_response(base_raw)
+                except Exception as e2:
+                    print(f"\nWarning: Gemini API error for note {i+1}: {e2}")
+                    medical_reasoning = f"ERROR: {str(e2)[:100]}"
                 
                 # Write to CSV
                 writer.writerow([note_content, realism_reasoning, medical_reasoning])
@@ -375,6 +411,8 @@ def main():
                 
             except Exception as e:
                 print(f"\nError processing note {i+1}: {e}")
+                import traceback
+                traceback.print_exc()
                 writer.writerow([
                     note_content, 
                     f"ERROR: {str(e)[:100]}", 
@@ -390,9 +428,10 @@ def main():
     print(f"{'='*60}")
     print("\nOutput columns:")
     print("  1. medical_note: Original medical note")
-    print("  2. realism_reasoning: Output from fine-tuned llama3-discriminator")
-    print("  3. medical_reasoning: Output from base model (discriminator_v2 logic)")
+    print("  2. realism_reasoning: Output from fine-tuned llama3-discriminator (LoRA)")
+    print("  3. medical_reasoning: Output from Gemini API (detailed feedback)")
     print(f"{'='*60}")
+
 
 if __name__ == "__main__":
     main()
